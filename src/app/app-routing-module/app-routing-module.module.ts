@@ -7,7 +7,7 @@ import { HomeComponent } from '../home/home.component';
 // sets up routes constant where you define your routes
 const routes: Routes = [{
    path: 'login', component: LoginComponent },
-  {path:'home',component: HomeComponent}];
+  {path:'',component: HomeComponent}];
 
 // configures NgModule imports and exports
 @NgModule({
