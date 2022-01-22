@@ -1,5 +1,19 @@
-.carousel-control-prev{
-  color:#7BB490;
+/*header*/
+.navbar-light .navbar-brand {
+  margin-left: 10px !important;
+}
+
+/*home*/
+.dropdown-item:hover {
+  color: #7BB490;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #7BB490;
+}
+
+.carousel-control-prev {
+  color: #7BB490;
 }
 
 .carousel-control-prev-icon {
@@ -10,4 +24,22 @@
   background-color: #7BB490;
 }
 
+.card-group>.card {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
 
+a:hover {
+  color: #7BB490;
+}
+
+a:focus {
+  color: #7BB490;
+}
+
+/*footer*/
+.mt-3 {
+  padding-top: 20px !important;
+}
