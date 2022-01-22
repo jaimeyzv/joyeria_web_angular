@@ -11,23 +11,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Anillos de matrimonio de oro</td>
-                <td>15/01/2022</td>
-                <td>S/. 5899.99</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Aretes colgantes de plata</td>
-                <td>16/01/2022</td>
-                <td>S/. 1499.99</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Cadena lomo corvina de plata</td>
-                <td>18/01/2022</td>
-                <td>S/. 3599.99</td>
+            <tr *ngFor="let item of historialCompras">
+                <td>0</td>
+                <td>{{item.descripcion}}</td>
+                <td>{{item.fecha}}</td>
+                <td>S/. {{item.montoPagado}}</td>
             </tr>
         </tbody>
     </table>
