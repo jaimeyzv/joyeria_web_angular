@@ -1,0 +1,20 @@
+.form-all{
+  margin-top:20px !important;
+  margin-left: 25% !important;
+  width:50% !important;
+}
+.form-item {
+  margin-top: 10px !important;
+}
+
+.container.form-login {
+  width: 100%;
+}
+
+.container.form-login>.form>.form-group {
+  margin-top: 10px !important;
+}
+
+.dropdown-item:hover {
+  color: #7BB490 !important;
+}

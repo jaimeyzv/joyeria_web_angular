@@ -41,15 +41,12 @@
   text-align: center;
 }
 
-/*home*/
-.dropdown-item:hover {
-  color: #7BB490 !important;
-}
 
 .navbar-light .navbar-nav .nav-link:hover {
   color: #7BB490 !important;
 }
 
+/*home*/
 .carousel-control-prev {
   color: #7BB490;
 }
