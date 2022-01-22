@@ -17,12 +17,20 @@
 
 }
 
+.navbar-collapse {
+  margin-left: 10px !important;
+  align-items: normal !important;
+}
+
 @media (max-width: 768px) {
   .navbar-nav {
-   /* display: none !important;*/
+    /* display: none !important;*/
     width: 100% !important;
   }
 
+  .navbar-toggler {
+    margin-right: 10px !important;
+  }
 }
 
 .navbar-brand.abs {
@@ -63,6 +71,9 @@
   }
 }
 
+a {
+  text-decoration: none;
+}
 
 a:hover {
   color: #7BB490;
