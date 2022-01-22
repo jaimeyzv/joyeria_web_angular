@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SemanaTresComponent } from './semana-tres/semana-tres.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HistorialComprasComponent } from './historial-compras/historial-compras.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     HomeComponent,
     SemanaTresComponent,
+    HistorialComprasComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
