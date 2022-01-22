@@ -1,15 +1,45 @@
 /*header*/
-.navbar-light .navbar-brand {
-  margin-left: 10px !important;
+
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    margin-left: auto;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-light .navbar-brand {
+    margin-left: 10px !important;
+  }
+
+
+
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+   /* display: none !important;*/
+
+  }
+
+}
+
+.navbar-brand.abs {
+  position: absolute;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 /*home*/
 .dropdown-item:hover {
-  color: #7BB490;
+  color: #7BB490 !important;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #7BB490;
+  color: #7BB490 !important;
 }
 
 .carousel-control-prev {
@@ -24,12 +54,15 @@
   background-color: #7BB490;
 }
 
-.card-group>.card {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  text-align: center;
+@media (min-width: 768px) {
+  .card-group>.card {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
+
 
 a:hover {
   color: #7BB490;
@@ -40,6 +73,15 @@ a:focus {
 }
 
 /*footer*/
+.text-reset {
+  text-decoration: none;
+  color: black;
+}
+
+.text-reset:hover {
+  color: #7BB490 !important;
+}
+
 .mt-3 {
   padding-top: 20px !important;
 }
