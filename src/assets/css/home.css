@@ -20,7 +20,7 @@
 @media (max-width: 768px) {
   .navbar-nav {
    /* display: none !important;*/
-
+    width: 100% !important;
   }
 
 }
