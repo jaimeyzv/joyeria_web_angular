@@ -12,6 +12,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ComplaintsBookComponent } from './complaints-book/complaints-book.component';
 import { ProductListComponent } from './products/components/list/product-list.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { ReportesVentasComponent } from './admin/reportes-ventas/reportes-ventas.component';
+import { ListarProductosComponent } from './admin/listar-productos/listar-productos.component';
+import { EditarProductosComponent } from './admin/editar-productos/editar-productos.component';
+import { RegistrarProductosComponent } from './admin/registrar-productos/registrar-productos.component';
 
 
 @NgModule({
@@ -25,6 +29,10 @@ import { ContactusComponent } from './contactus/contactus.component';
     AboutusComponent,
     ComplaintsBookComponent,
     ProductListComponent,
+    RegistrarProductosComponent,
+    EditarProductosComponent,
+    ListarProductosComponent,
+    ReportesVentasComponent,
     ContactusComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
