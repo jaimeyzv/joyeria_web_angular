@@ -8,13 +8,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   loginForm= this.fb.group({
-    usuario:['',Validators.required],
+    usuario:['',[Validators.required,Validators.email]],
     password:['',Validators.required]
   });
   constructor( private fb:FormBuilder) { }
   _onSubmit(){
-    if(!this.usuario?.valid|| this.usuario?.value==" ")return alert("Ingrese usuario")
-     if(!this.password?.valid|| this.password?.value==" ")return alert("Ingrese password")
+    if(!this.usuario?.valid || this.usuario?.value==" ")return alert("Ingrese Correo Electronico");
+     if(!this.password?.valid || this.password?.value==" ")return alert("Ingrese password");
     if(this.loginForm.valid){
       alert("Bienvenido");
     }else{

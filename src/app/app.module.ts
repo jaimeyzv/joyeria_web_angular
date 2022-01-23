@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HistorialComprasComponent } from './historial-compras/historial-compras.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UpdateComponent } from './update/update.component';
     HistorialComprasComponent,
     RegisterComponent,
     UpdateComponent,
+    AboutusComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
