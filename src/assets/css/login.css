@@ -27,3 +27,8 @@
 .dropdown-item:hover {
   color: #7BB490 !important;
 }
+
+button.botonForm.btn.btn-primary {
+  background-color: #7BB490;
+  border-color:#7BB490;
+}

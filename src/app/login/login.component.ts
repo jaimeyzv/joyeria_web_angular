@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   constructor( private fb:FormBuilder) { }
   _onSubmit(){
     if(this.loginForm.valid){
-      alert("Iniciaste sesión");
+      alert(this.loginForm.value);
     }else{
       alert("Rellene los datos");
     }

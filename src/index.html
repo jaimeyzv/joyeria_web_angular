@@ -9,6 +9,23 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="assets/css/home.css" />
   <link rel="stylesheet" href="assets/css/login.css" />
+  <script>
+    function showPass() {
+      var x = document.getElementById("myInputPass");
+      var y = document.getElementById("myInputConPass")
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+      if (y.type === "password") {
+        y.type = "text";
+      } else {
+        y.type = "password";
+      }
+
+    }
+  </script>
 </head>
 
 <body>
