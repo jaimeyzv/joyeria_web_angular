@@ -9,7 +9,7 @@ import { HistorialComprasComponent } from './historial-compras/historial-compras
 import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { ProductosComponent } from './productos/productos.component';
+import { ProductListComponent } from './products/components/list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ProductosComponent } from './productos/productos.component';
     RegisterComponent,
     UpdateComponent,
     AboutusComponent,
-    ProductosComponent,
+    ProductListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
