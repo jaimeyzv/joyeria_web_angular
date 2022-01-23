@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="container form-login">
+  <div class="login col-12">
+    <div class="form-logo">
+
+    </div>
+    <form class="form form-all " [formGroup]="registerForm" method="post">
+      <img class="form-img" src="assets/img/login/logo.png" alt="enjoya" width="300" height="300">
+      <h2 class="text-center"> Registrar</h2>
+      <div class="form-item form-group">
+        <input type="text" formControlName="nombres" placeholder="Nombres" class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <input type="text" formControlName="apellidos" placeholder="Apellidos" class="form-control">
+      </div>
+      <div class="form-item form-group ">
+        <select class="form-control form-control-sm" formControlName="docidentidad">
+          <option value="" selected="">Doc. de Identidad</option>
+          <option value="1">DNI</option>
+          <option value="2">RUC</option>
+          <option value="3">Pasaporte</option>
+          <option value="4">Carnet de Extranjeria</option>
+        </select>
+      </div>
+      <div class="form-item form-group">
+        <input type="text" formControlName="numberidentidad" placeholder="N° doc.Identidad" class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <input type="number" formControlName="celular" placeholder="Celular" class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <input type="email" formControlName="email" placeholder="Correo electrónico" class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <input type="email" formControlName="confirmemail" placeholder="Confirmar Correo electrónico"
+          class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <input type="password" formControlName="password" placeholder="Contraseña " class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <input type="password" formControlName="confirmpassword" placeholder="Confirmar Contraseña "
+          class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <button (click)="_onSubmit()" class="btn btn-primary" type="submit">Registrar</button>
+      </div>
+    </form>
+
+  </div>
+
+
+</div>
