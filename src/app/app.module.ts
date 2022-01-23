@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { SemanaTresComponent } from './semana-tres/semana-tres.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HistorialComprasComponent } from './historial-compras/historial-compras.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HistorialComprasComponent } from './historial-compras/historial-compras
     HomeComponent,
     SemanaTresComponent,
     HistorialComprasComponent,
+    RegisterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

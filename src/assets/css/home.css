@@ -93,3 +93,15 @@ a:focus {
 .mt-3 {
   padding-top: 20px !important;
 }
+
+.contacts {
+  padding: 0 !important;
+}
+
+.categories {
+  padding: 0 !important;
+}
+
+.fastlink{
+  padding: 0 !important;
+}
