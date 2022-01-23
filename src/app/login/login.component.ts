@@ -13,13 +13,20 @@ export class LoginComponent implements OnInit {
   });
   constructor( private fb:FormBuilder) { }
   _onSubmit(){
+    if(!this.usuario?.valid|| this.usuario?.value==" ")return alert("Ingrese usuario")
+     if(!this.password?.valid|| this.password?.value==" ")return alert("Ingrese password")
     if(this.loginForm.valid){
-      alert(this.loginForm.value);
+      alert("Bienvenido");
     }else{
       alert("Rellene los datos");
     }
   }
   ngOnInit(): void {
   }
-
+  get usuario(){
+return this.loginForm.get('usuario');
+}
+get password(){
+return this.loginForm.get('password');
+}
 }

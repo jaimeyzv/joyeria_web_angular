@@ -8,6 +8,7 @@ import { SemanaTresComponent } from './semana-tres/semana-tres.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HistorialComprasComponent } from './historial-compras/historial-compras.component';
 import { RegisterComponent } from './register/register.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RegisterComponent } from './register/register.component';
     SemanaTresComponent,
     HistorialComprasComponent,
     RegisterComponent,
+    UpdateComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

@@ -5,6 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { SemanaTresComponent } from '../semana-tres/semana-tres.component';
 import { HistorialComprasComponent } from '../historial-compras/historial-compras.component';
 import { RegisterComponent } from '../register/register.component';
+import { UpdateComponent } from '../update/update.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {path: 'register',component: RegisterComponent},
+  {path:'update',component: UpdateComponent},
   { path: 'home', component: HomeComponent },
   { path: 'semanatres', component: SemanaTresComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
