@@ -9,11 +9,9 @@ import { HistorialComprasComponent } from './historial-compras/historial-compras
 import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-<<<<<<< HEAD
 import { ComplaintsBookComponent } from './complaints-book/complaints-book.component';
-=======
 import { ProductListComponent } from './products/components/list/product-list.component';
->>>>>>> dcb0e66857fd4ac32bab62f8dd9d6fd018217d4b
+
 
 @NgModule({
   declarations: [
@@ -24,11 +22,8 @@ import { ProductListComponent } from './products/components/list/product-list.co
     RegisterComponent,
     UpdateComponent,
     AboutusComponent,
-<<<<<<< HEAD
     ComplaintsBookComponent,
-=======
     ProductListComponent,
->>>>>>> dcb0e66857fd4ac32bab62f8dd9d6fd018217d4b
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

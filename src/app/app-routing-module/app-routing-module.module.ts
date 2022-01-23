@@ -7,6 +7,7 @@ import { RegisterComponent } from '../register/register.component';
 import { UpdateComponent } from '../update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
 import { ProductListComponent } from '../products/components/list/product-list.component';
+import { ComplaintsBookComponent } from '../complaints-book/complaints-book.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'historial-compras', component: HistorialComprasComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
   { path: 'product-list', component: ProductListComponent },
+  {path:'librodereclamaciones',component:ComplaintsBookComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

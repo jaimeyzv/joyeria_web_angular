@@ -8,10 +8,26 @@ import { FormBuilder } from '@angular/forms';
 })
 export class ComplaintsBookComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
-combookForm = this.fb.group({
 
+combookForm = this.fb.group({
+fechaReclamo:[""],
+codReclamacion:[""],
+razSEmpresa:[""],
+dirEmpresa:[""],
+nomApellido:[""],
+domicilio:[""],
+nDocumento:[""],
+email:[""],
+telf:[""],
+apoderado:[""],
+tipo:[""],
+montoReclamado:[""],
+descReclamado:[""],
+tipo2:[""],
+detalleReclamado:[""],
+pedidoReclamado:[""]
 });
+ constructor(private fb: FormBuilder) { }
 _onSubmit(){
 
 }
