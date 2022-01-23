@@ -9,12 +9,9 @@ import { HistorialComprasComponent } from './historial-compras/historial-compras
 import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { ProductosComponent } from './productos/productos.component';
-import { RegistrarProductosComponent } from './admin/registrar-productos/registrar-productos.component';
-import { EditarProductosComponent } from './admin/editar-productos/editar-productos.component';
-import { ListarProductosComponent } from './admin/listar-productos/listar-productos.component';
-import { ReportesVentasComponent } from './admin/reportes-ventas/reportes-ventas.component';
-import { ContactusComponent } from './contactus/contactus.component';
+import { ComplaintsBookComponent } from './complaints-book/complaints-book.component';
+import { ProductListComponent } from './products/components/list/product-list.component';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +22,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     RegisterComponent,
     UpdateComponent,
     AboutusComponent,
-    ProductosComponent,
-    RegistrarProductosComponent,
-    EditarProductosComponent,
-    ListarProductosComponent,
-    ReportesVentasComponent,
-    ContactusComponent,
+    ComplaintsBookComponent,
+    ProductListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
