@@ -6,6 +6,11 @@ import { HistorialComprasComponent } from '../historial-compras/historial-compra
 import { RegisterComponent } from '../register/register.component';
 import { UpdateComponent } from '../update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
+import { RegistrarProductosComponent } from '../admin/registrar-productos/registrar-productos.component';
+import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
+import { EditarProductosComponent } from '../admin/editar-productos/editar-productos.component';
+import { ReportesVentasComponent } from '../admin/reportes-ventas/reportes-ventas.component';
+import { ContactusComponent } from '../contactus/contactus.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -19,6 +24,11 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'contactus', component: ContactusComponent },
+  { path: 'listar-productos', component: ListarProductosComponent },
+  { path: 'registrar-productos', component: RegistrarProductosComponent },
+  { path: 'editar-productos', component: EditarProductosComponent },
+  { path: 'reportes-ventas', component: ReportesVentasComponent },
 ];
 
 // configures NgModule imports and exports
