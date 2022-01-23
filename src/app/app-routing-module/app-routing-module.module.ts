@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { HomeComponent } from '../home/home.component';
-import { SemanaTresComponent } from '../semana-tres/semana-tres.component';
 import { HistorialComprasComponent } from '../historial-compras/historial-compras.component';
 import { RegisterComponent } from '../register/register.component';
 import { UpdateComponent } from '../update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
+import { ProductListComponent } from '../products/components/list/product-list.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -14,12 +14,13 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
   },
-  {path: 'register',component: RegisterComponent},
-  {path:'update',component: UpdateComponent},
+  { path: 'register', component: RegisterComponent },
+  { path: 'update', component: UpdateComponent },
   { path: 'home', component: HomeComponent },
-  { path:'aboutus',component: AboutusComponent},
-  { path: 'semanatres', component: SemanaTresComponent },
+  { path: 'aboutus', component: AboutusComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
+  { path: 'historial-compras', component: HistorialComprasComponent },
+  { path: 'product-list', component: ProductListComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
