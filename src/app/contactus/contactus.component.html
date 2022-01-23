@@ -1,56 +1,58 @@
 <div class="container" style="padding-top: 120px;">
-    <h3>Contactenos</h3>
-    <p>
-        Nos puedes contactar por el siguiente formulario        
-    </p>
-    <div class="row">
-        <div class="col-6">
+  <h3>Contactenos</h3>
+  <p>
+    Nos puedes contactar por el siguiente formulario
+  </p>
+  <div class="row">
+    <div class="col-6">
 
-            <form [formGroup]="contactusForm" autocomplete="off">
-                <div formGroupName="persona">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1" class="form-label">Nombres </label>
-                        <input type="text" formControlName="nombre" placeholder="" class="form-control"> 
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1" class="form-label">Apellidos </label>
-                        <input type="text" formControlName="apellido" placeholder="" class="form-control">
-                    </div>                   
-                </div>  
+      <form [formGroup]="contactusForm" autocomplete="off">
+        <div formGroupName="persona">
+          <div class="form-group">
+            <label for="exampleFormControlInput1" class="form-label">Nombres </label>
+            <input type="text" formControlName="nombre" placeholder="" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1" class="form-label">Apellidos </label>
+            <input type="text" formControlName="apellido" placeholder="" class="form-control">
+          </div>
+        </div>
 
-                <div class="form-group">
-                    <label for="exampleFormControlInput1" class="form-label">Correo Electrónico (*)</label>
-                    <input type="email" formControlName="email" placeholder="" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1" class="form-label">Mensaje (*)</label>
-                    <textarea formControlName="mensaje" rows="3" placeholder="" class="form-control"></textarea>
-                </div>
-  
-                
-                <div class="form-group">
-                    <br>
-                    <button (click)="__onSubmit()"  type="button" class="btn btn-primary">Enviar</button>
-                </div>
-            </form>
-            <!-- <p>
+        <div class="form-group">
+          <label for="exampleFormControlInput1" class="form-label">Correo Electrónico (*)</label>
+          <input type="email" formControlName="email" placeholder="" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1" class="form-label">Mensaje (*)</label>
+          <textarea formControlName="mensaje" rows="3" placeholder="" class="form-control"></textarea>
+        </div>
+
+
+        <div class="form-group">
+          <br>
+          <button (click)="__onSubmit()" type="button" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+      <!-- <p>
                 Datos del Form: {{ contactusForm.value | json }}
             </p>
             <p>
                 Form is valid?: {{ contactusForm.valid }}
             </p> -->
-        </div>
-        <div class="col-6">
-            <div class="row">
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1182603028537!2d-76.96509068507015!3d-12.10405574626472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c70ab77498c1%3A0xcce9f50642e7c684!2sUniversidad%20Peruana%20de%20Ciencias%20Aplicadas!5e0!3m2!1ses-419!2spe!4v1642815593516!5m2!1ses-419!2spe" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124847.19104559209!2d-77.0989478324702!3d-12.079619239413626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf13c960e4e3%3A0xd2c3449626c14579!2sTienda%20enjoy!5e0!3m2!1ses-419!2spe!4v1642976986428!5m2!1ses-419!2spe" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="row">
-                <b>Telefono: </b>  (+51) 946-041-693
-            </div>
-            <div class="row">
-                <b>Direccion:</b> Avenida Miramar 185 - Rimac
-            </div>
-        </div>
     </div>
+    <div class="col-6">
+      <div class="row">
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1182603028537!2d-76.96509068507015!3d-12.10405574626472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c70ab77498c1%3A0xcce9f50642e7c684!2sUniversidad%20Peruana%20de%20Ciencias%20Aplicadas!5e0!3m2!1ses-419!2spe!4v1642815593516!5m2!1ses-419!2spe" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124847.19104559209!2d-77.0989478324702!3d-12.079619239413626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf13c960e4e3%3A0xd2c3449626c14579!2sTienda%20enjoy!5e0!3m2!1ses-419!2spe!4v1642976986428!5m2!1ses-419!2spe"
+          width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="row">
+        <b>Telefono: </b> (+51) 946-041-693
+      </div>
+      <div class="row">
+        <b>Direccion:</b> Avenida Miramar 185 - Rimac
+      </div>
+    </div>
+  </div>
 </div>

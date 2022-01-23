@@ -8,6 +8,11 @@ import { UpdateComponent } from '../update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
 import { ProductListComponent } from '../products/components/list/product-list.component';
 import { ComplaintsBookComponent } from '../complaints-book/complaints-book.component';
+import { ContactusComponent } from '../contactus/contactus.component';
+import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
+import { RegistrarProductosComponent } from '../admin/registrar-productos/registrar-productos.component';
+import { EditarProductosComponent } from '../admin/editar-productos/editar-productos.component';
+import { ReportesVentasComponent } from '../admin/reportes-ventas/reportes-ventas.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -24,6 +29,11 @@ const routes: Routes = [
   { path: 'product-list', component: ProductListComponent },
   {path:'librodereclamaciones',component:ComplaintsBookComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'contactus', component: ContactusComponent },
+  { path: 'listar-productos', component: ListarProductosComponent },
+  { path: 'registrar-productos', component: RegistrarProductosComponent },
+  { path: 'editar-productos', component: EditarProductosComponent },
+  { path: 'reportes-ventas', component: ReportesVentasComponent }
 ];
 
 // configures NgModule imports and exports

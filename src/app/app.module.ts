@@ -11,6 +11,7 @@ import { UpdateComponent } from './update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ComplaintsBookComponent } from './complaints-book/complaints-book.component';
 import { ProductListComponent } from './products/components/list/product-list.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ProductListComponent } from './products/components/list/product-list.co
     AboutusComponent,
     ComplaintsBookComponent,
     ProductListComponent,
+    ContactusComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
