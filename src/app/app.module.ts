@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HistorialComprasComponent } from './historial-compras/historial-compras.component';
+import { HistorialComprasComponent } from './historial-compras/components/historial-compras.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -16,7 +16,6 @@ import { ReportesVentasComponent } from './admin/reportes-ventas/reportes-ventas
 import { ListarProductosComponent } from './admin/listar-productos/listar-productos.component';
 import { EditarProductosComponent } from './admin/editar-productos/editar-productos.component';
 import { RegistrarProductosComponent } from './admin/registrar-productos/registrar-productos.component';
-
 
 @NgModule({
   declarations: [
@@ -33,7 +32,7 @@ import { RegistrarProductosComponent } from './admin/registrar-productos/registr
     EditarProductosComponent,
     ListarProductosComponent,
     ReportesVentasComponent,
-    ContactusComponent
+    ContactusComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

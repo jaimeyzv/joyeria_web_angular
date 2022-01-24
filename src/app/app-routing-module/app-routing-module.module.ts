@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { HomeComponent } from '../home/home.component';
-import { HistorialComprasComponent } from '../historial-compras/historial-compras.component';
+import { HistorialComprasComponent } from '../historial-compras/components/historial-compras.component';
 import { RegisterComponent } from '../register/register.component';
 import { UpdateComponent } from '../update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
@@ -27,13 +27,13 @@ const routes: Routes = [
   { path: 'historial-compras', component: HistorialComprasComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
   { path: 'product-list', component: ProductListComponent },
-  {path:'librodereclamaciones',component:ComplaintsBookComponent},
+  { path: 'librodereclamaciones', component: ComplaintsBookComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'contactus', component: ContactusComponent },
   { path: 'listar-productos', component: ListarProductosComponent },
   { path: 'registrar-productos', component: RegistrarProductosComponent },
   { path: 'editar-productos', component: EditarProductosComponent },
-  { path: 'reportes-ventas', component: ReportesVentasComponent }
+  { path: 'reportes-ventas', component: ReportesVentasComponent },
 ];
 
 // configures NgModule imports and exports
