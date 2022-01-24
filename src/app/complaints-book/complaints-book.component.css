@@ -1,0 +1,9 @@
+.form-check-input:checked {
+  background-color: #7BB490;
+  border-color: #7BB490;
+}
+
+input[type="checkbox"]:checked{
+  background-color: #7BB490;
+  accent-color: #7BB490;
+}
