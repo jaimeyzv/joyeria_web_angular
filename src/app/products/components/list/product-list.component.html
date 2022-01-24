@@ -1,1 +1,25 @@
 <p>list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <input type="text" class="form-control" placeholder="busqueda por nombre o descripcion">
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary ">Buscar</button>
+        </div>
+    </div>
+    <!-- cardgroup-->
+    <div class="card-group">
+      <div class="card" *ngFor="let p of products">
+        <img class="card-img-top" src="{{ p.urlImage}}" alt="babylover">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.nombre }}</h5>
+          <p class="card-text">{{ p.descripcion }}</p>
+          <p class="card-text">{{ p.linea }}</p>
+          <p class="card-text">{{ p.material }}</p>
+          <p class="card-text"><small class="text-muted">S/. {{ p.precio }}</small></p>
+        </div>
+      </div>
+    </div>
+</div>
+  
