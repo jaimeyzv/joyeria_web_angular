@@ -18,6 +18,8 @@ import { EditarProductosComponent } from './admin/editar-productos/editar-produc
 import { RegistrarProductosComponent } from './admin/registrar-productos/registrar-productos.component';
 import { ProductDetailComponent } from './products/components/detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { HttpClientModule } from '@angular/common/http';
     ListarProductosComponent,
     ReportesVentasComponent,
     ContactusComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    HeaderComponent,
+    CartComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
   providers: [],

@@ -14,7 +14,7 @@ import { RegistrarProductosComponent } from '../admin/registrar-productos/regist
 import { EditarProductosComponent } from '../admin/editar-productos/editar-productos.component';
 import { ReportesVentasComponent } from '../admin/reportes-ventas/reportes-ventas.component';
 import { ProductDetailComponent } from '../products/components/detail/product-detail.component';
-
+import { CartComponent } from '../cart/cart.component';
 // sets up routes constant where you define your routes
 const routes: Routes = [
   {
@@ -22,6 +22,7 @@ const routes: Routes = [
     component: LoginComponent,
   },
   { path: 'register', component: RegisterComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'update', component: UpdateComponent },
   { path: 'home', component: HomeComponent },
   { path: 'aboutus', component: AboutusComponent },

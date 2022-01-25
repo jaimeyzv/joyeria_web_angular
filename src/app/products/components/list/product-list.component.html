@@ -1,26 +1,14 @@
-<div class="container" style="padding-top: 20px;">
+<div class="container">
     <div class="row">
-        <div class="col-md-9">
-            <input type="text" class="form-control" placeholder="busqueda por nombre o descripcion">
-        </div>
-        <div class="col-md-3">
-            <button type="submit" class="btn btn-primary ">Buscar</button>
-        </div>
-    </div>
-    <!-- cardgroup-->
-    <div class="card-group">
-      <div class="card" *ngFor="let p of products">
-        <a routerLink="/product-detail/{{ p.productId}}" class="portfolio-link" data-toggle="modal">
-          <img class="card-img-top" src="{{ p.urlImage}}" alt="babylover">
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">{{ p.nombre }}</h5>
-          <p class="card-text">{{ p.descripcion }}</p>
-          <p class="card-text">{{ p.linea }}</p>
-          <p class="card-text">{{ p.material }}</p>
-          <p class="card-text"><small class="text-muted">S/. {{ p.precio }}</small></p>
-        </div>
-      </div>
+        <ng-container *ngFor="let item of filterCategory ">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> ${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Agregar carrito</button>
+            </div>
+        </ng-container>
+
     </div>
 </div>
-  
