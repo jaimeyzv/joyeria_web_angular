@@ -24,7 +24,7 @@ export class RegistrarProductosComponent implements OnInit {
   __onSubmit() {
     if(this.productForm.valid) {
       console.log(this.productForm.value);
-      alert("Los datos fueron correctamente registrados");
+      alert("Los datos fueron correctamente actualizados");
     } else {
       alert("Complete todos los campos");
     }
