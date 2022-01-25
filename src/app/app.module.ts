@@ -20,6 +20,8 @@ import { ProductDetailComponent } from './products/components/detail/product-det
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
+import { SearchComponent } from './search/search.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { CartComponent } from './cart/cart.component';
     ContactusComponent,
     ProductDetailComponent,
     HeaderComponent,
-    CartComponent
+    CartComponent,
+    SearchComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
   providers: [],

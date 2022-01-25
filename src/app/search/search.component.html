@@ -1,0 +1,13 @@
+<div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+
+        <div class="form-group">
+            <input type="text" class="form-control col-1" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+        </div>
+
+    </div>
+    <button routerLink="cart" class="btn btn-primary">
+      <img src="../../assets/img/cart/carrito-de-compras.png" alt="libr" width="50" height="50">
+      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+  </button>
+</div>
