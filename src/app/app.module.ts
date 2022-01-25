@@ -16,6 +16,7 @@ import { ReportesVentasComponent } from './admin/reportes-ventas/reportes-ventas
 import { ListarProductosComponent } from './admin/listar-productos/listar-productos.component';
 import { EditarProductosComponent } from './admin/editar-productos/editar-productos.component';
 import { RegistrarProductosComponent } from './admin/registrar-productos/registrar-productos.component';
+import { ProductDetailComponent } from './products/components/detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RegistrarProductosComponent } from './admin/registrar-productos/registr
     ListarProductosComponent,
     ReportesVentasComponent,
     ContactusComponent,
+    ProductDetailComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

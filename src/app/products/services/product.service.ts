@@ -7,6 +7,7 @@ import { IProduct } from '../models/product';
 export class ProductService {
   products: Array<IProduct> = [
     {
+      productId: 1,
       nombre: 'Collar Mia Basic',
       descripcion: 'Collar de bla bla bla',
       linea: 'Hombre',
@@ -15,6 +16,7 @@ export class ProductService {
       urlImage: 'assets/img/products/list/collar-mia-basic.png',
     },
     {
+      productId: 2,
       nombre: 'Collar Proteccion Hombre',
       descripcion: 'Collar de bla bla bla',
       linea: 'Hombre',
@@ -23,6 +25,7 @@ export class ProductService {
       urlImage: 'assets/img/products/list/collar-proteccion-hombre.png',
     },
     {
+      productId: 3,
       nombre: 'Llavero Escudo',
       descripcion: 'Collar de bla bla bla',
       linea: 'Hombre',
@@ -31,6 +34,7 @@ export class ProductService {
       urlImage: 'assets/img/products/list/llavero-escudo.png',
     },
     {
+      productId: 4,
       nombre: 'Collar Senhor Milagros Basic',
       descripcion: 'Collar de bla bla bla',
       linea: 'Mujer',

@@ -13,6 +13,7 @@ import { ListarProductosComponent } from '../admin/listar-productos/listar-produ
 import { RegistrarProductosComponent } from '../admin/registrar-productos/registrar-productos.component';
 import { EditarProductosComponent } from '../admin/editar-productos/editar-productos.component';
 import { ReportesVentasComponent } from '../admin/reportes-ventas/reportes-ventas.component';
+import { ProductDetailComponent } from '../products/components/detail/product-detail.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'registrar-productos', component: RegistrarProductosComponent },
   { path: 'editar-productos', component: EditarProductosComponent },
   { path: 'reportes-ventas', component: ReportesVentasComponent },
+  { path: 'product-detail/:id', component: ProductDetailComponent }
 ];
 
 // configures NgModule imports and exports

@@ -1,5 +1,4 @@
-<p>list works!</p>
-<div class="container">
+<div class="container" style="padding-top: 20px;">
     <div class="row">
         <div class="col-md-9">
             <input type="text" class="form-control" placeholder="busqueda por nombre o descripcion">
@@ -11,7 +10,9 @@
     <!-- cardgroup-->
     <div class="card-group">
       <div class="card" *ngFor="let p of products">
-        <img class="card-img-top" src="{{ p.urlImage}}" alt="babylover">
+        <a routerLink="/product-detail/{{ p.productId}}" class="portfolio-link" data-toggle="modal">
+          <img class="card-img-top" src="{{ p.urlImage}}" alt="babylover">
+        </a>
         <div class="card-body">
           <h5 class="card-title">{{ p.nombre }}</h5>
           <p class="card-text">{{ p.descripcion }}</p>
