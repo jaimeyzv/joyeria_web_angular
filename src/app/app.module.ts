@@ -23,6 +23,7 @@ import { CartComponent } from './cart/cart.component';
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { FilterPipe } from './shared/filter.pipe';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FilterPipe } from './shared/filter.pipe';
     CartComponent,
     SearchComponent,
     FooterComponent,
-    FilterPipe
+    FilterPipe,
+    PaymentComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
   providers: [],
