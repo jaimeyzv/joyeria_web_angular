@@ -5,20 +5,16 @@ import { ProductService } from '../../services/product.service';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.css']
+  styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
-
-  products: Array<IProduct> = [];
+  products!: Array<IProduct>;
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    this.productService.getProducts().subscribe((response) => {
+      this.products = response;
+    });
   }
-
-  getProducts(): Array<IProduct> {
-    return this.productService.getProducts();
-  }
-
 }
