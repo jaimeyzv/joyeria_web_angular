@@ -10,7 +10,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { UpdateComponent } from './user/update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ComplaintsBookComponent } from './complaints-book/complaints-book.component';
-import { ProductListComponent } from './product/components/list/product-list.component';
+//import { ProductListComponent } from './product/components/list/product-list.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ReportesVentasComponent } from './admin/reportes-ventas/reportes-ventas.component';
 import { ListarProductosComponent } from './admin/listar-productos/listar-productos.component';
@@ -25,7 +25,9 @@ import { FooterComponent } from './footer/footer.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { PaymentComponent } from './payment/payment.component';
 import { CreateComponent } from './product/components/create/create.component';
-import { ListComponent } from './admin/product/components/list/list.component';
+import { ProductListComponent } from './admin/product/components/product-list/product-list.component';
+import { ProductEditComponent } from './admin/product/components/product-edit/product-edit.component';
+import { ProductCreateComponent } from './admin/product/components/product-create/product-create.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,7 @@ import { ListComponent } from './admin/product/components/list/list.component';
     UpdateComponent,
     AboutusComponent,
     ComplaintsBookComponent,
-    ProductListComponent,
+    //ProductListComponent,
     RegistrarProductosComponent,
     EditarProductosComponent,
     ListarProductosComponent,
@@ -51,7 +53,9 @@ import { ListComponent } from './admin/product/components/list/list.component';
     FilterPipe,
     PaymentComponent,
     CreateComponent,
-    ListComponent,
+    ProductListComponent,
+    ProductEditComponent,
+    ProductCreateComponent,
   ],
   imports: [
     BrowserModule,

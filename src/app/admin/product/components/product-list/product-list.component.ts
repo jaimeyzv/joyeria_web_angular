@@ -3,11 +3,11 @@ import { IProduct } from '../../models/product';
 import { ProductService } from '../../services/product.service';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css'],
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css'],
 })
-export class ListComponent implements OnInit {
+export class ProductListComponent implements OnInit {
   products!: Array<IProduct>;
 
   constructor(private productService: ProductService) {
@@ -21,7 +21,6 @@ export class ListComponent implements OnInit {
   }
 
   delete(id: number) {
-    alert(id);
     this.productService.delete(id).subscribe((res) => {
       this.products = this.products.filter((p) => p.id !== id);
     });

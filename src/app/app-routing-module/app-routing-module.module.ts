@@ -17,7 +17,9 @@ import { ProductDetailComponent } from '../product/components/detail/product-det
 import { CartComponent } from '../cart/cart.component';
 import { PaymentComponent } from '../payment/payment.component';
 //import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
-import { ListComponent } from '../admin/product/components/list/list.component';
+import { ProductListComponent } from '../admin/product/components/product-list/product-list.component';
+import { ProductEditComponent } from '../admin/product/components/product-edit/product-edit.component';
+import { ProductCreateComponent } from '../admin/product/components/product-create/product-create.component';
 // sets up routes constant where you define your routes
 const routes: Routes = [
   {
@@ -36,9 +38,11 @@ const routes: Routes = [
   { path: 'librodereclamaciones', component: ComplaintsBookComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'contactus', component: ContactusComponent },
-  { path: 'product-list', component: ListComponent },
+  { path: 'product-list', component: ProductListComponent },
+  { path: 'product-edit/:id', component: ProductEditComponent },
+  { path: 'product-create', component: ProductCreateComponent },
   { path: 'registrar-productos', component: RegistrarProductosComponent },
-  { path: 'editar-productos', component: EditarProductosComponent },
+  //{ path: 'editar-productos', component: EditarProductosComponent },
   { path: 'reportes-ventas', component: ReportesVentasComponent },
   { path: 'product-detail/:id', component: ProductDetailComponent },
 ];
