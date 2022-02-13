@@ -6,16 +6,18 @@ import { HistorialComprasComponent } from '../historial-compras/components/histo
 import { RegisterComponent } from '../user/register/register.component';
 import { UpdateComponent } from '../user/update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
-import { ProductListComponent } from '../product/components/list/product-list.component';
+//mport { ProductListComponent } from '../product/components/list/product-list.component';
 import { ComplaintsBookComponent } from '../complaints-book/complaints-book.component';
 import { ContactusComponent } from '../contactus/contactus.component';
-import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
+//import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
 import { RegistrarProductosComponent } from '../admin/registrar-productos/registrar-productos.component';
 import { EditarProductosComponent } from '../admin/editar-productos/editar-productos.component';
 import { ReportesVentasComponent } from '../admin/reportes-ventas/reportes-ventas.component';
 import { ProductDetailComponent } from '../product/components/detail/product-detail.component';
 import { CartComponent } from '../cart/cart.component';
 import { PaymentComponent } from '../payment/payment.component';
+//import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
+import { ListComponent } from '../admin/product/components/list/list.component';
 // sets up routes constant where you define your routes
 const routes: Routes = [
   {
@@ -30,11 +32,11 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
-  { path: 'product-list', component: ProductListComponent },
+  //{ path: 'product-list', component: ProductListComponent },
   { path: 'librodereclamaciones', component: ComplaintsBookComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'contactus', component: ContactusComponent },
-  { path: 'listar-productos', component: ListarProductosComponent },
+  { path: 'product-list', component: ListComponent },
   { path: 'registrar-productos', component: RegistrarProductosComponent },
   { path: 'editar-productos', component: EditarProductosComponent },
   { path: 'reportes-ventas', component: ReportesVentasComponent },

@@ -25,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { PaymentComponent } from './payment/payment.component';
 import { CreateComponent } from './product/components/create/create.component';
+import { ListComponent } from './admin/product/components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { CreateComponent } from './product/components/create/create.component';
     FilterPipe,
     PaymentComponent,
     CreateComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
