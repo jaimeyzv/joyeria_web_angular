@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
+import { LoginComponent } from '../user/login/login.component';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { HomeComponent } from '../home/home.component';
 import { HistorialComprasComponent } from '../historial-compras/components/historial-compras.component';
-import { RegisterComponent } from '../register/register.component';
-import { UpdateComponent } from '../update/update.component';
+import { RegisterComponent } from '../user/register/register.component';
+import { UpdateComponent } from '../user/update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
 import { ProductListComponent } from '../products/components/list/product-list.component';
 import { ComplaintsBookComponent } from '../complaints-book/complaints-book.component';
