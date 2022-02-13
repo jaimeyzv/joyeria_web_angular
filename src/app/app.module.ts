@@ -10,13 +10,13 @@ import { RegisterComponent } from './user/register/register.component';
 import { UpdateComponent } from './user/update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ComplaintsBookComponent } from './complaints-book/complaints-book.component';
-import { ProductListComponent } from './products/components/list/product-list.component';
+import { ProductListComponent } from './product/components/list/product-list.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ReportesVentasComponent } from './admin/reportes-ventas/reportes-ventas.component';
 import { ListarProductosComponent } from './admin/listar-productos/listar-productos.component';
 import { EditarProductosComponent } from './admin/editar-productos/editar-productos.component';
 import { RegistrarProductosComponent } from './admin/registrar-productos/registrar-productos.component';
-import { ProductDetailComponent } from './products/components/detail/product-detail.component';
+import { ProductDetailComponent } from './product/components/detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
@@ -24,7 +24,7 @@ import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { PaymentComponent } from './payment/payment.component';
-import { CreateComponent } from './products/components/create/create.component';
+import { CreateComponent } from './product/components/create/create.component';
 
 @NgModule({
   declarations: [
@@ -49,9 +49,15 @@ import { CreateComponent } from './products/components/create/create.component';
     FooterComponent,
     FilterPipe,
     PaymentComponent,
-    CreateComponent
+    CreateComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

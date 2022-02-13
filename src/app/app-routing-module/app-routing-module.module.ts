@@ -6,14 +6,14 @@ import { HistorialComprasComponent } from '../historial-compras/components/histo
 import { RegisterComponent } from '../user/register/register.component';
 import { UpdateComponent } from '../user/update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
-import { ProductListComponent } from '../products/components/list/product-list.component';
+import { ProductListComponent } from '../product/components/list/product-list.component';
 import { ComplaintsBookComponent } from '../complaints-book/complaints-book.component';
 import { ContactusComponent } from '../contactus/contactus.component';
 import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
 import { RegistrarProductosComponent } from '../admin/registrar-productos/registrar-productos.component';
 import { EditarProductosComponent } from '../admin/editar-productos/editar-productos.component';
 import { ReportesVentasComponent } from '../admin/reportes-ventas/reportes-ventas.component';
-import { ProductDetailComponent } from '../products/components/detail/product-detail.component';
+import { ProductDetailComponent } from '../product/components/detail/product-detail.component';
 import { CartComponent } from '../cart/cart.component';
 import { PaymentComponent } from '../payment/payment.component';
 // sets up routes constant where you define your routes
@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'registrar-productos', component: RegistrarProductosComponent },
   { path: 'editar-productos', component: EditarProductosComponent },
   { path: 'reportes-ventas', component: ReportesVentasComponent },
-  { path: 'product-detail/:id', component: ProductDetailComponent }
+  { path: 'product-detail/:id', component: ProductDetailComponent },
 ];
 
 // configures NgModule imports and exports

@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { IProduct } from '../models/product';
@@ -13,17 +13,16 @@ export class ProductService {
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<IProduct[]> {
-    //return this.http.get<IProduct[]>(this.baseUrl);
     return this.http.get<IProduct[]>(this.baseUrl).pipe(
       map((o) =>
         o.map(
           (p): IProduct => ({
-            productId: p.productId,
-            nombre: p.nombre,
-            descripcion: p.descripcion,
-            precio: p.precio,
-            linea: p.linea,
-            material: p.material,
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            stock: p.stock,
+            price: p.price,
+            categoryId: p.categoryId,
             urlImage: p.urlImage,
           })
         )
