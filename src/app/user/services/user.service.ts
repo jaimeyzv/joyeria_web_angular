@@ -35,13 +35,19 @@ o.map(
 
 }
 
-
+_getUserById(){
+return this.http.get<any>('https://localhost:44343/api/user');
+}
 
 
   __listUser(){
-    return this.http.get<any>('https://localhost:44343/api/user/list');
+    return this.http.get<any>('https://localhost:44343/api/user');
   }
   __insert(data:any){
-    return this.http.post<any>('https://localhost:44343/api/user/create',data);
+    return this.http.post<any>('https://localhost:44343/api/user',data);
+  }
+  __update(data:any,id:any){
+    return this.http.put<any>('https://localhost:44343/api/user/'+id,data);
+
   }
 }

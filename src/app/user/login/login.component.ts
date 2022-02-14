@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
     });
   }
   __login(){
+    let id ="";
     let correo ="";
     let pass="";
     let user="";
@@ -49,6 +50,7 @@ export class LoginComponent implements OnInit {
         for(let r of rest){
 
         if(this.usuario?.value == r.email){
+            id=r.id;
             correo = r.email;
             pass = r.password;
            user = r.name+' '+rest.lastName;
@@ -59,6 +61,7 @@ export class LoginComponent implements OnInit {
        if(exist == false)return alert("'Correo y/o Contraseña Invalido'");
 
        if(this.password?.value==pass){
+               sessionStorage.setItem('id',id);
                sessionStorage.setItem('user',user);
                sessionStorage.setItem('tipo',tipo);
 
