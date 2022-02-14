@@ -20,7 +20,7 @@
                     <td class="align-middle">{{p.description}}</td>
                     <td class="align-middle">S/ {{p.price | number : '1.2-2'}} </td>
                     <td class="align-middle">{{p.stock}}</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-dark"><i class="fa fa-pencil"></i>Editar</a></td>
+                    <td class="text-center"><button class="btn btn-outline-dark" (click)=edit(p.id)><i class="fa fa-pencil"></i>Editar</button></td>
                     <td class="text-center"><button class="btn btn-outline-danger" (click)=delete(p.id)><i class="fa fa-remove"></i>Eliminar</button></td>
                 </tr>                       
             </tbody>
