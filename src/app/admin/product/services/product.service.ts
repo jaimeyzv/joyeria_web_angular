@@ -38,6 +38,10 @@ export class ProductService {
     return this.http.put(`${this.baseUrl}/${id}`, product);
   }
 
+  create(product: IProduct) {
+    return this.http.post(`${this.baseUrl}`, product);
+  }
+
   delete(id: number) {
     return this.http.delete(this.baseUrl + '/' + id);
   }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ICategory } from 'src/app/admin/category/models/category';
+import { CategoryService } from 'src/app/category/services/category.service';
 import { IProduct } from '../../models/product';
 import { ProductService } from '../../services/product.service';
 
@@ -11,18 +13,19 @@ import { ProductService } from '../../services/product.service';
 })
 export class ProductEditComponent implements OnInit {
   id!: number;
-  product!: IProduct;
-  productFormEditar = this.formBuilder.group({
-    categoria: ['', Validators.required],
+  productForm = this.formBuilder.group({
     name: ['', Validators.required],
     description: ['', Validators.required],
+    categoryId: ['', Validators.required],
     price: [0, [Validators.min(1), Validators.required]],
     stock: [0, [Validators.min(1), Validators.required]],
-    imagen: ['', Validators.required],
+    imagen: [''],
   });
+  categories: Array<ICategory> = [];
 
   constructor(
     private productService: ProductService,
+    private categoryService: CategoryService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private formBuilder: FormBuilder
@@ -31,12 +34,15 @@ export class ProductEditComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params['id'];
     this.productService.getProduct(this.id).subscribe((response) => {
-      this.product = <IProduct>response;
+      this.productForm.patchValue(<IProduct>response);
+      this.categoryService.getCategories().subscribe((response) => {
+        this.categories = <Array<ICategory>>response;
+      });
     });
   }
 
   onSubmit() {
-    this.productService.update(this.id, this.product).subscribe(
+    this.productService.update(this.id, this.productForm.value).subscribe(
       (data) => {
         this.goToProductList();
       },

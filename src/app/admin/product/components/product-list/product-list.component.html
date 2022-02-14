@@ -1,5 +1,6 @@
 <div class="container">
     <h2 class="text-center" style="font-size: 26px; margin-bottom:20px;">Listado de Productos</h2>
+    <button class="btn btn-primary" (click)=goToProductCreate() style="background-color: normal;">Crear</button>    
     <div class="table-responsive table-striped" style="border-radius: 10px;">
         <table class="table" style="margin:0px;">
             <thead style="background-color: rgba(52,58,64,0.75);color: rgb(255,255,255);">
@@ -13,7 +14,7 @@
                     <th class="align-middle" style="text-align: center;"></th>
                 </tr>
             </thead>
-            <tbody *ngIf="products.length > 0">
+            <tbody>
                 <tr *ngFor="let p of products">
                     <td class="align-middle">Categoria</td>
                     <td class="align-middle">{{p.name}}</td>
