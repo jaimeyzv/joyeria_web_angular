@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
     let tipo="";
     let exist = false;
     this.us.__listUser().subscribe((rest:any)=>{
-
+        console.log(rest);
 
         for(let r of rest){
 
@@ -57,11 +57,12 @@ export class LoginComponent implements OnInit {
         }
       }
        if(exist == false)return alert("'Correo y/o Contraseña Invalido'");
-      if(this.password?.value==pass){
+
+       if(this.password?.value==pass){
                sessionStorage.setItem('user',user);
                sessionStorage.setItem('tipo',tipo);
 
-            this.router.navigateByUrl('/home',{skipLocationChange:false}).then(
+          this.router.navigateByUrl('/home',{skipLocationChange:false}).then(
               ()=>{
                 this.router.navigate(['home']);
                 window.location.reload();
@@ -71,6 +72,7 @@ export class LoginComponent implements OnInit {
         }
 
     });
+
   }
   _onSubmit(){
 

@@ -1,18 +1,17 @@
 <div class="container form-login">
   <div class="login col-12">
     <form class="form form-all " [formGroup]="registerForm" method="post">
-      <img class="form-img" src="assets/img/login/logo.png" alt="enjoya" width="300" height="300"
-        (ngSubmit)="_onSubmit()">
+      <img class="form-img" src="assets/img/login/logo.png" alt="enjoya" width="300" height="300">
       <h2 class="text-center"> Registrar</h2>
       <div class="form-item form-group">
-        <input type="text" formControlName="nombres" placeholder="Nombres" class="form-control">
+        <input type="text" formControlName="name" placeholder="Nombres" class="form-control">
       </div>
 
       <div class="form-item form-group">
-        <input type="text" formControlName="apellidos" placeholder="Apellidos" class="form-control">
+        <input type="text" formControlName="lastName" placeholder="Apellidos" class="form-control">
       </div>
       <div class="form-item form-group ">
-        <select class="form-control form-control-sm" formControlName="docidentidad">
+        <select class="form-control form-control-sm" formControlName="documentTypeId">
           <option value="" selected="">Doc. de Identidad</option>
           <option value="1">DNI</option>
           <option value="2">RUC</option>
@@ -21,13 +20,13 @@
         </select>
       </div>
       <div class="form-item form-group">
-        <input type="text" formControlName="numberidentidad" placeholder="N° doc.Identidad" class="form-control">
+        <input type="text" formControlName="documentNumber" placeholder="N° doc.Identidad" class="form-control">
       </div>
       <div class="form-item form-group">
-        <input type="number" formControlName="celular" placeholder="Celular" class="form-control">
+        <input type="number" formControlName="cellphone" placeholder="Celular" class="form-control">
       </div>
       <div class="form-item form-group">
-        <input type="text" formControlName="direction" placeholder="Dirección" class="form-control">
+        <input type="text" formControlName="address" placeholder="Dirección" class="form-control">
       </div>
       <div class="form-item form-group">
         <input type="email" formControlName="email" placeholder="Correo electrónico" class="form-control">
