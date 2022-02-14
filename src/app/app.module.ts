@@ -10,12 +10,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { UpdateComponent } from './user/update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ComplaintsBookComponent } from './complaints-book/complaints-book.component';
-//import { ProductListComponent } from './product/components/list/product-list.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ReportesVentasComponent } from './admin/reportes-ventas/reportes-ventas.component';
-import { ListarProductosComponent } from './admin/listar-productos/listar-productos.component';
-import { EditarProductosComponent } from './admin/editar-productos/editar-productos.component';
-import { RegistrarProductosComponent } from './admin/registrar-productos/registrar-productos.component';
 import { ProductDetailComponent } from './product/components/detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
@@ -28,6 +23,7 @@ import { CreateComponent } from './product/components/create/create.component';
 import { ProductListComponent } from './admin/product/components/product-list/product-list.component';
 import { ProductEditComponent } from './admin/product/components/product-edit/product-edit.component';
 import { ProductCreateComponent } from './admin/product/components/product-create/product-create.component';
+import { SaleReportComponent } from './admin/sale/components/sale-report/sale-report.component';
 
 @NgModule({
   declarations: [
@@ -39,11 +35,6 @@ import { ProductCreateComponent } from './admin/product/components/product-creat
     UpdateComponent,
     AboutusComponent,
     ComplaintsBookComponent,
-    //ProductListComponent,
-    RegistrarProductosComponent,
-    EditarProductosComponent,
-    ListarProductosComponent,
-    ReportesVentasComponent,
     ContactusComponent,
     ProductDetailComponent,
     HeaderComponent,
@@ -56,6 +47,7 @@ import { ProductCreateComponent } from './admin/product/components/product-creat
     ProductListComponent,
     ProductEditComponent,
     ProductCreateComponent,
+    SaleReportComponent,
   ],
   imports: [
     BrowserModule,

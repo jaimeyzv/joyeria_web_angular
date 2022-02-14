@@ -6,28 +6,25 @@ import { HistorialComprasComponent } from '../historial-compras/components/histo
 import { RegisterComponent } from '../user/register/register.component';
 import { UpdateComponent } from '../user/update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
-//mport { ProductListComponent } from '../product/components/list/product-list.component';
 import { ComplaintsBookComponent } from '../complaints-book/complaints-book.component';
 import { ContactusComponent } from '../contactus/contactus.component';
-//import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
-import { RegistrarProductosComponent } from '../admin/registrar-productos/registrar-productos.component';
-import { EditarProductosComponent } from '../admin/editar-productos/editar-productos.component';
-import { ReportesVentasComponent } from '../admin/reportes-ventas/reportes-ventas.component';
 import { ProductDetailComponent } from '../product/components/detail/product-detail.component';
 import { CartComponent } from '../cart/cart.component';
 import { PaymentComponent } from '../payment/payment.component';
-//import { ListarProductosComponent } from '../admin/listar-productos/listar-productos.component';
 import { ProductListComponent } from '../admin/product/components/product-list/product-list.component';
 import { ProductEditComponent } from '../admin/product/components/product-edit/product-edit.component';
 import { ProductCreateComponent } from '../admin/product/components/product-create/product-create.component';
 import { LogoutComponent } from '../user/login/logout.component';
+import { SaleReportComponent } from '../admin/sale/components/sale-report/sale-report.component';
+
 // sets up routes constant where you define your routes
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
   },
-  {path:'logout', component: LogoutComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'logout', component: LogoutComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'cart', component: CartComponent },
   { path: 'pay', component: PaymentComponent },
@@ -36,16 +33,12 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
   { path: 'historial-compras', component: HistorialComprasComponent },
-  //{ path: 'product-list', component: ProductListComponent },
   { path: 'librodereclamaciones', component: ComplaintsBookComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'contactus', component: ContactusComponent },
-  { path: 'product-list', component: ProductListComponent },
-  { path: 'product-edit/:id', component: ProductEditComponent },
-  { path: 'product-create', component: ProductCreateComponent },
-  { path: 'registrar-productos', component: RegistrarProductosComponent },
-  //{ path: 'editar-productos', component: EditarProductosComponent },
-  { path: 'reportes-ventas', component: ReportesVentasComponent },
+  { path: 'admin/product-list', component: ProductListComponent },
+  { path: 'admin/product-edit/:id', component: ProductEditComponent },
+  { path: 'admin/product-create', component: ProductCreateComponent },
+  { path: 'admin/sale-report', component: SaleReportComponent },
   { path: 'product-detail/:id', component: ProductDetailComponent },
 ];
 
