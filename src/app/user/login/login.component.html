@@ -3,14 +3,6 @@
     <div class="form-logo">
 
     </div>
-    <div class="row">
-      <div *ngFor="let u of userslist">
-        <ul>
-          <li>{{u.id}}</li>
-          <li>{{u.name}}</li>
-        </ul>
-      </div>
-    </div>
 
     <form class="form form-all " [formGroup]="loginForm" method="post">
       <img class="form-img" src="assets/img/login/logo.png" alt="enjoya" width="300" height="300">

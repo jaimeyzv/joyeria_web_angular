@@ -8,4 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent {
   title = 'joyeria_web_angular';
+  user = sessionStorage.getItem('user');
+   tipo= sessionStorage.getItem('tipo');
 }

@@ -20,12 +20,14 @@ import { PaymentComponent } from '../payment/payment.component';
 import { ProductListComponent } from '../admin/product/components/product-list/product-list.component';
 import { ProductEditComponent } from '../admin/product/components/product-edit/product-edit.component';
 import { ProductCreateComponent } from '../admin/product/components/product-create/product-create.component';
+import { LogoutComponent } from '../user/login/logout.component';
 // sets up routes constant where you define your routes
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
   },
+  {path:'logout', component: LogoutComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'cart', component: CartComponent },
   { path: 'pay', component: PaymentComponent },

@@ -34,14 +34,13 @@ o.map(
 );
 
 }
-  __login(data:any){
-    return this.http.post<any>('',data);
+  __login(param:any){
+    return this.http.get<any>('https://localhost:44343/api/user/user'+param);
   }
   __listUser(){
-    return this.http.get<any>('https://localhost:44343/api/user');
+    return this.http.get<any>('https://localhost:44343/api/user/list');
   }
   __insert(data:any){
-    return this.http.post<any>('https://localhost:44343/api/user/create',data);
-
+    return this.http.post<any>('https://localhost:44343/api/user/user',data);
   }
 }
