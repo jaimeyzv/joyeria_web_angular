@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { IUser } from '../model/user';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  userslist:any =[];
+  users!: Array<IUser>;
   loginForm= this.fb.group({
     usuario:['',[Validators.required,Validators.email]],
     password:['',Validators.required]
@@ -16,24 +19,28 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb:FormBuilder,
     private readonly us: UserService,
+    private ar:ActivatedRoute,
     private router: Router
     ) { }
-  __login(data:any){
-    this.us.__login(data).subscribe((rest: any)=>{
-         alert(rest);
 
-        
+  __listUser(){
+    this.us.__listUser().subscribe((rest: any)=>{
+       this.userslist = rest;
+      /*   alert(rest[0].id);
+        console.log(rest);*/
+      /*
         if(rest.email == this.usuario && rest.password == this.password){
           alert("Logeaste");
-          /*  sessionStorage.setItem('user',rest.name+' '+rest.lastName);
+            sessionStorage.setItem('user',rest.name+' '+rest.lastName);
             this.router.navigateByUrl('/home',{skipLocationChange:false}).then(
               ()=>{
                 this.router.navigate(['home']);
                 window.location.reload();
-              });*/
+              });
         }else{
             alert("correo y/o contraseña Incorrecta");
         }
+        */
     });
   }
 
@@ -41,12 +48,20 @@ export class LoginComponent implements OnInit {
     if(!this.usuario?.valid || this.usuario?.value==" ")return alert("Ingrese Correo Electronico");
      if(!this.password?.valid || this.password?.value==" ")return alert("Ingrese password");
     if(this.loginForm.valid){
-      this.__login(this.loginForm.value);
+     /* this.us.getUsers().subscribe((rest)=>{
+        var u = this.users;
+        u = rest;
+          alert(rest);
+          console.log(rest[0]);
+      });*/
+
     }else{
       alert("Rellene los datos");
     }
   }
   ngOnInit(): void {
+
+
   }
   get usuario(){
 return this.loginForm.get('usuario');
