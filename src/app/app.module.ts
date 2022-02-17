@@ -26,7 +26,7 @@ import { ProductCreateComponent } from './admin/product/components/product-creat
 import { SaleReportComponent } from './admin/sale/components/sale-report/sale-report.component';
 import { CategoryListComponent } from './admin/category/components/category-list/category-list.component';
 import { UsersListComponent } from './user/list/users-list/users-list.component';
-
+import { ProductListCarComponent } from './product/components/list/product-list-car.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +52,7 @@ import { UsersListComponent } from './user/list/users-list/users-list.component'
     SaleReportComponent,
     CategoryListComponent,
     UsersListComponent,
+    ProductListCarComponent
   ],
   imports: [
     BrowserModule,
