@@ -16,7 +16,8 @@ import { ProductEditComponent } from '../admin/product/components/product-edit/p
 import { ProductCreateComponent } from '../admin/product/components/product-create/product-create.component';
 import { LogoutComponent } from '../user/login/logout.component';
 import { SaleReportComponent } from '../admin/sale/components/sale-report/sale-report.component';
-
+import { CategoryListComponent } from '../admin/category/components/category-list/category-list.component';
+import { UsersListComponent }    from '../user/list/users-list/users-list.component';
 // sets up routes constant where you define your routes
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
   { path: 'admin/product-edit/:id', component: ProductEditComponent },
   { path: 'admin/product-create', component: ProductCreateComponent },
   { path: 'admin/sale-report', component: SaleReportComponent },
+  { path: 'admin/category-list', component:CategoryListComponent },
+  { path: 'admin/users-list', component:UsersListComponent },
+
+
   { path: 'product-detail/:id', component: ProductDetailComponent },
 ];
 

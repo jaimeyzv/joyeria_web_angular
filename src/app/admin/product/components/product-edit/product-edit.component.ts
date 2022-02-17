@@ -51,6 +51,6 @@ export class ProductEditComponent implements OnInit {
   }
 
   goToProductList() {
-    this.router.navigate(['/product-list']);
+    this.router.navigate(['admin/product-list']);
   }
 }

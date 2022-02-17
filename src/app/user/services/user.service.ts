@@ -7,7 +7,7 @@ import { IUser } from '../model/user';
   providedIn: 'root'
 })
 export class UserService {
-  users:Array<IUser> =[];
+  users: Array<IUser> =[];
   readonly baseUrl ='https://localhost:44343/api/user' ;
   constructor(
     private readonly http:HttpClient
@@ -18,15 +18,15 @@ map((o)=>
 o.map(
     (u):IUser =>({
 
-    Name: u.Name,
-    LastName: u.LastName,
-    DocumentNumber: u.DocumentNumber,
-    Email: u.Email,
-    Password: u.Password,
-    Address: u.Address,
-    Cellphone: u.Cellphone,
-    UserTypeId: u.UserTypeId,
-    DocumentTypeId: u.DocumentTypeId
+    name: u.name,
+    lastName: u.lastName,
+    documentNumber: u.documentNumber,
+    email: u.email,
+    password: u.password,
+    address: u.address,
+    cellphone: u.cellphone,
+    userTypeId: u.userTypeId,
+    documentTypeId: u.documentTypeId
     })
 
 ))

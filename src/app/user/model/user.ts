@@ -1,11 +1,11 @@
 export interface IUser{
-    Name: string,
-    LastName: string,
-    DocumentNumber: string,
-    Email: string,
-    Password: string,
-    Address: string,
-    Cellphone: string,
-    UserTypeId: number,
-    DocumentTypeId: number
+    name: string,
+    lastName: string,
+    documentNumber: string,
+    email: string,
+    password: string,
+    address: string,
+    cellphone: string,
+    userTypeId: number,
+    documentTypeId: number
 }

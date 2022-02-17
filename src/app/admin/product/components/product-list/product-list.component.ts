@@ -26,10 +26,10 @@ export class ProductListComponent implements OnInit {
   }
 
   edit(id: number) {
-    this.router.navigate(['product-edit', id]);
+    this.router.navigate(['admin/product-edit', id]);
   }
 
   goToProductCreate() {
-    this.router.navigate(['/product-create']);
+    this.router.navigate(['admin/product-create']);
   }
 }

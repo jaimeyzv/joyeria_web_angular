@@ -24,6 +24,8 @@ import { ProductListComponent } from './admin/product/components/product-list/pr
 import { ProductEditComponent } from './admin/product/components/product-edit/product-edit.component';
 import { ProductCreateComponent } from './admin/product/components/product-create/product-create.component';
 import { SaleReportComponent } from './admin/sale/components/sale-report/sale-report.component';
+import { CategoryListComponent } from './admin/category/components/category-list/category-list.component';
+import { UsersListComponent } from './user/list/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { SaleReportComponent } from './admin/sale/components/sale-report/sale-re
     ProductEditComponent,
     ProductCreateComponent,
     SaleReportComponent,
+    CategoryListComponent,
+    UsersListComponent,
   ],
   imports: [
     BrowserModule,

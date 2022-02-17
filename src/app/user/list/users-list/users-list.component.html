@@ -1,0 +1,36 @@
+<div class="container">
+    <h2 class="text-center" style="font-size: 26px; margin-bottom:20px;">Listado de Usuario</h2>
+  
+  
+    <div class="table-responsive table-striped" style="border-radius: 10px;">
+        <br>
+        <table class="table" style="margin:0px;">
+            <thead style="background-color: rgba(52,58,64,0.75);color: rgb(255,255,255);">
+                <tr>              
+                    <th class="align-middle"><strong>Nombre</strong><br></th>
+                    <th class="align-middle"><strong>Apellidos</strong><br></th>
+                    <th class="align-middle"><strong>DNI</strong><br></th>
+                    <th class="align-middle"><strong>Correo</strong><br></th>
+                    <th class="align-middle"><strong>Dirección</strong><br></th>
+                    <th class="align-middle"><strong>Celular</strong><br></th>
+                    <th class="align-middle" style="text-align: center;"></th>
+                    <th class="align-middle" style="text-align: center;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of users">
+                   
+                    <td class="align-middle">{{p.name}}</td>
+                    <td class="align-middle">{{p.lastName}}</td>
+                    <td class="align-middle">{{p.documentNumber}}</td>
+                    <td class="align-middle">{{p.email}}</td>
+                    <td class="align-middle">{{p.address}}</td>
+                    <td class="align-middle">{{p.cellphone}}</td>
+               
+                    <td class="text-center"><button class="btn btn-outline-dark" ><i class="fa fa-pencil"></i>Editar</button></td>
+                    <td class="text-center"><button class="btn btn-outline-danger" ><i class="fa fa-remove"></i>Eliminar</button></td>
+                </tr>                       
+            </tbody>
+        </table>
+    </div>
+</div>

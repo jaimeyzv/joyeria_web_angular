@@ -1,11 +1,12 @@
 <div class="container">
     <h2 class="text-center" style="font-size: 26px; margin-bottom:20px;">Listado de Productos</h2>
-    <button class="btn btn-primary" (click)=goToProductCreate() style="background-color: normal;">Crear</button>    
+    <button class="btn btn-primary" (click)=goToProductCreate() style="background-color: normal;">Nuevo</button> 
+  
     <div class="table-responsive table-striped" style="border-radius: 10px;">
+        <br>
         <table class="table" style="margin:0px;">
             <thead style="background-color: rgba(52,58,64,0.75);color: rgb(255,255,255);">
-                <tr>
-                    <th class="align-middle">Categoria</th>
+                <tr>              
                     <th class="align-middle"><strong>Nombre</strong><br></th>
                     <th class="align-middle"><strong>Descripcion</strong><br></th>
                     <th class="align-middle"><strong>Precio</strong><br></th>
@@ -16,7 +17,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let p of products">
-                    <td class="align-middle">Categoria</td>
+                   
                     <td class="align-middle">{{p.name}}</td>
                     <td class="align-middle">{{p.description}}</td>
                     <td class="align-middle">S/ {{p.price | number : '1.2-2'}} </td>
