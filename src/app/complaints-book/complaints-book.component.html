@@ -6,153 +6,151 @@
       <p>Conforme a lo establecido en el Código de Protección y Defensa del Consumidor contamos con un Libro de
         Reclamaciones a
         tu disposición. Ingresa una queja o reclamo aquí.</p>
-      <div formGroupName="form1">
-        <div class="row">
-          <div class="col-md-6 col-12">
-            <div class="form-group">
-              <label for="fechaReclamo">Fecha de Reclamo o queja:</label>
-              <input id="fechaReclamo" type="text" formControlName="fechaReclamo" value="23-01-2022"
-                class="form-control" readonly>
-            </div>
-          </div>
-          <div class="col-md-6 col-12">
-            <div class=" form-group">
-              <label for="codReclamacion">Hoja reclamación:</label>
-              <input id="codReclamacion" type="text" formControlName="codReclamacion" value="00001-2022"
-                class="form-control" readonly>
-            </div>
+
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <div class="form-group">
+            <label for="fechaReclamo">Fecha de Reclamo o queja:</label>
+            <input id="fechaReclamo" type="text" value="23-01-2022" class="form-control" readonly>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <label for="razSEmpresa">Razón social:</label>
-              <input id="razSEmpresa" type="text" formControlName="razSEmpresa" value="Tamyle Perú SAC"
-                class="form-control" readonly>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="form-group">
-              <label for="dirEmpresa">Dirección:</label>
-              <input id="dirEmpresa" type="text" formControlName="dirEmpresa"
-                value="av. General Santa Cruz  653 int 1001" class="form-control" readonly>
-            </div>
+        <div class="col-md-6 col-12">
+          <div class=" form-group">
+            <label for="codReclamacion">Hoja reclamación:</label>
+            <input id="codReclamacion" type="text" value="00001-2022" class="form-control" readonly>
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="razSEmpresa">Razón social:</label>
+            <input id="razSEmpresa" type="text" value="Tamyle Perú SAC" class="form-control" readonly>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="dirEmpresa">Dirección:</label>
+            <input id="dirEmpresa" type="text" value="av. General Santa Cruz  653 int 1001" class="form-control"
+              readonly>
+          </div>
+        </div>
+      </div>
+
 
       <hr class="mt-2 mb-2">
       <h5>1. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE</h5>
-      <div formGroupName="form2">
-        <div class="form-group">
-          <label for="nomApellido">Nombres y Apellidos:</label>
-          <input id="nomApellido" type="text" formControlName="nomApellido" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="domicilio">Dirección:</label>
-          <input id="domicilio" type="text" formControlName="domicilio" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="nDocumento">N.Documento de indentidad:</label>
-          <input id="nDocumento" type="number" formControlName="nDocumento" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="email">Correo Electronico:</label>
-          <input id="email" type="email" formControlName="email" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="telf">Telefono:</label>
-          <input id="telf" type="number" formControlName="telf" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="apoderado">Padre o Madre: <small>si eres menor de edad -18 años , ingresa nombre y apellidos
-            </small></label>
-          <input id="apoderado" type="text" formControlName="apoderado" class="form-control">
-        </div>
+
+      <div class="form-group">
+        <label for="name">Nombres y Apellidos:</label>
+        <input id="Name" type="text" formControlName="name" class="form-control">
       </div>
+      <div class="form-group">
+        <label for="address">Dirección:</label>
+        <input id="address" type="text" formControlName="address" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="ndoc">N.Documento de indentidad:</label>
+        <input id="ndoc" type="number" formControlName="ndoc" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="email">Correo Electronico:</label>
+        <input id="email" type="email" formControlName="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="cellphone">Telefono:</label>
+        <input id="cellphone" type="number" formControlName="cellphone" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="Repre">Padre o Madre: <small>si eres menor de edad -18 años , ingresa nombre y apellidos
+          </small></label>
+        <input id="repre" type="text" formControlName="repre" class="form-control">
+      </div>
+
 
       <hr class="mt-2 mb-2">
       <h5>2. IDENTIFICACION DEL BIEN CONTRATADO</h5>
-      <div formGroupName="form3">
+
+
+      <div class="form-group">
+        <div class="form-check">
+
+          <input type="radio" class="form-check-input" id="typep" name="typep" formControlName="typep" value="Producto"
+            checked>Producto
+          <label class="form-check-label" for="Typep"></label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="typep2" name="typep" formControlName="typep"
+            value="Servicio">Servicio
+          <label class="form-check-label" for=" typep"></label>
+        </div>
 
         <div class="form-group">
-          <div class="form-check">
-
-            <input type="radio" class="form-check-input" id="tipoProducto" name="optradio" formControlName="tipo"
-              value="producto" checked>Producto
-            <label class="form-check-label" for="tipoProducto"></label>
-          </div>
-          <div class="form-check">
-            <input type="radio" class="form-check-input" id="tipoServicio" name="optradio" formControlName="tipo"
-              value="servicio">Servicio
-            <label class="form-check-label" for=" tipoServicio"></label>
-          </div>
-
-
-
+          <label for="price">Monto Reclamado:</label>
+          <input id="price" type="number" formControlName="price" class="form-control">
         </div>
         <div class="form-group">
-          <label for="montoReclamado">Monto Reclamado:</label>
-          <input id="montoReclamado" type="number" formControlName="montoReclamado" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="descReclamado">Descripcion:</label>
-          <textarea id="descReclamado" rows="5" formControlName="descReclamado" class="form-control">
+          <label for="descp">Descripcion:</label>
+          <textarea id="descp" rows="5" maxlength="500" formControlName="descp" class="form-control">
           </textarea>
+          <div id="cont1"></div>
         </div>
       </div>
 
       <hr class="mt-2 mb-2">
       <h5>3. DETALLE DE LA RECLAMACIÓN</h5>
-      <div formGroupName="form4">
-        <div class="form-group">
-          <div class="form-check">
-            <input type="radio" class="form-check-input" id="tipoReclamo" name="optradio2" formControlName="tipo2"
-              value="reclamo" checked>Reclamo(*)
 
-            <label class="form-check-label" for="tipoReclamo"></label>
+      <div class="form-group">
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="typc" name="typc" formControlName="typc" value="Reclamo"
+            checked>Reclamo(*)
 
+          <label class="form-check-label" for="typc"></label>
 
-          </div>
-          <div class="form-check">
-            <input type="radio" class="form-check-input" id="tipoQueja" name="optradio2" formControlName="tipo2"
-              value="queja">
-            Queja(**)
-            <label class="form-check-label" for="tipoQueja">
-            </label>
-          </div>
 
         </div>
-        <div class="form-group">
-          <label for="detalleReclamado">Detalle:</label>
-          <textarea id="detalleReclamado" rows="5" formControlName="detalleReclamado" class="form-control"> </textarea>
-          <small>
-            "*"
-            <strong>RECLAMO:</strong>
-            "Disconformidad relacionada a los productos expendidos o servicios brindados."
-            <br>
-            "**"
-            <strong>QUEJA:</strong>
-            "Disconformidad NO RELACIONADA a los productos o servicios. Malestar o descontento respecto con la atención
-            al público."
-          </small>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="typc2" name="typc" formControlName="typc" value="Queja">
+          Queja(**)
+          <label class="form-check-label" for="tpc2">
+          </label>
         </div>
-        <div class="form-group">
-          <label for="pedidoReclamado">Pedido:</label>
-          <textarea id="pedidoReclamado" rows="5" formControlName="pedidoReclamado" class="form-control"> </textarea>
 
-        </div>
-        <div class=" form-group">
-          <input type="checkbox" formControlName="acceptTerms"> Acepto los Términos del artículo
-          150º de la Ley Nº 29571 del
-          Código de Protección y Defensa del Consumidor
-        </div>
-        <div class="form-group">
-          <button (click)="_onSubmit()" class="botonForm btn btn-primary" type="submit">Registrar</button>
-        </div>
       </div>
+      <div class="form-group">
+        <label for="descc">Detalle:</label>
+        <textarea id="descc" rows="5" maxlength="500" formControlName="descc" class="form-control"> </textarea>
+        <div id="cont2"></div>
+        <small>
+          "*"
+          <strong>RECLAMO:</strong>
+          "Disconformidad relacionada a los productos expendidos o servicios brindados."
+          <br>
+          "**"
+          <strong>QUEJA:</strong>
+          "Disconformidad NO RELACIONADA a los productos o servicios. Malestar o descontento respecto con la atención
+          al público."
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="pedic">Pedido:</label>
+        <textarea id="pedic" rows="5" maxlength="500" formControlName="pedic" class="form-control"> </textarea>
+        <div id="cont3"></div>
+      </div>
+      <div class=" form-group">
+        <input type="checkbox"> Acepto los Términos del artículo
+        150º de la Ley Nº 29571 del
+        Código de Protección y Defensa del Consumidor
+      </div>
+      <div class="form-group">
+        <button (click)="_onSubmit()" class="botonForm btn btn-primary" type="submit">Registrar</button>
+      </div>
+
 
     </form>
 
   </div>
+
+
+
 </div>

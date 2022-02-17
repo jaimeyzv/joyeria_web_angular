@@ -59,7 +59,8 @@ if(number!=12)return alert("El Carnet de Extranjeria debe tener 12 caracteres");
   if(this.registerForm.valid ){
     let nombre = this.name?.value;
     let apellido=this.lastName?.value;
-    //alert("this.registerForm.value");
+    alert(this.registerForm.value);
+    console.log(this.registerForm.value);
     this._create(this.registerForm.value);
 
 
@@ -70,6 +71,7 @@ if(number!=12)return alert("El Carnet de Extranjeria debe tener 12 caracteres");
 }
 
 _create(data:any){
+
   this.us.__insert(data).subscribe((result:any)=>{
     if(result.name !=null){
        alert("Se registro con exito, Ingrese su correo y contraseña");

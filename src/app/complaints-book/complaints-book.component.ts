@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CheckboxRequiredValidator, FormBuilder, Validators } from '@angular/forms';
-
+import { ComplaintsBookService } from './services/complaints-book.service';
 @Component({
   selector: 'app-complaints-book',
   templateUrl: './complaints-book.component.html',
@@ -8,94 +8,121 @@ import { CheckboxRequiredValidator, FormBuilder, Validators } from '@angular/for
 })
 export class ComplaintsBookComponent implements OnInit {
 
-
+complaints:any=[];
 combookForm = this.fb.group({
-  form1: this.fb.group({
-    fechaReclamo:['23-01-2022',],
-    codReclamacion:['00001-2022',],
-    razSEmpresa:['Enjoya EIRL',],
-    dirEmpresa:['general santa cruz, Jesus Maria',]
-  }),
-  form2:this.fb.group({
-nomApellido:['',Validators.required],
-domicilio:['',Validators.required],
-nDocumento:['',Validators.required],
+/*
+    fechaReclamo:['23-01-2022'],
+    codReclamacion:['00001-2022'],
+    razSEmpresa:['Enjoya EIRL'],
+    dirEmpresa:['general santa cruz, Jesus Maria']
+ ,*/
+
+name:['',Validators.required],
+address:['',Validators.required],
+ndoc:['',Validators.required],
 email:['',[Validators.required, Validators.email]],
-telf:['',Validators.required],
-apoderado:['']
-  }),
-  form3:this.fb.group({
-tipo:['',Validators.required],
-montoReclamado:['',Validators.required],
-descReclamado:['',Validators.required]
-  }),
-  form4:this.fb.group({
-tipo2:['',Validators.required],
-detalleReclamado:['',Validators.required],
-pedidoReclamado:['',Validators.required],
-acceptTerms:['',Validators.required]
-  }),
+cellphone:['',Validators.required],
+repre:['not parent']
+ ,
+
+typep:['',Validators.required],
+price:[''],
+descp:['',Validators.required],
+
+typc:['',Validators.required],
+descc:['',Validators.required],
+pedic:['',Validators.required]
+/*,
+acceptTerms:['',Validators.required]*/
+
 });
- constructor(private fb: FormBuilder) { }
+ constructor(private fb: FormBuilder, private readonly cs: ComplaintsBookService) { }
+ _topShow(){
+
+            window.scroll(0,0);
+ }
 _onSubmit(){
 
-   if(!this.nomApellido?.valid|| this.nomApellido?.value==" ")return alert("Ingresar Nombre y Apellido");
-   if(!this.nDocumento?.valid|| this.nDocumento?.value==" ")return alert("Ingresar N.Documento");
+   if(!this.name?.valid|| this.name?.value==" ")return alert("Ingresar Nombre y Apellido");
+   if(!this.ndoc?.valid|| this.ndoc?.value==" ")return alert("Ingresar N.Documento");
+   if(!this.address?.valid|| this.address?.value==" ")return alert("Ingresar Direccion de Domicilio");
    if(!this.email?.valid|| this.email?.value==" ")return alert("Ingresar correo electronico");
-   if(!this.telf?.valid|| this.telf?.value==" ")return alert("Ingresar un numero de telefono o celular");
-   if(!this.tipo?.valid)return  alert("Marque si es Producto o Servicio");
-   if(!this.descReclamado?.valid|| this.descReclamado?.value==" ")return
-   alert("Ingresar descripción del Producto o Servicio");
-   if(!this.tipo2?.valid)return
-   alert("Marque si es Reclamo o Queja");
-   if(!this.detalleReclamado?.valid|| this.detalleReclamado?.value==" ")return
-   alert("Ingresar el Detalle del Reclamo o Queja");
-   if(!this.pedidoReclamado?.valid|| this.pedidoReclamado?.value==" ")return
-   alert("Ingresar el Pedido del Reclamo o Queja");
-   if(!this.acceptTerms?.valid)return alert("Aceptar los terminos y condiciones");
-   if(this.combookForm.valid)
-    alert("Registro Exitoso");
+   if(!this.cellphone?.valid|| this.cellphone?.value==" ")return alert("Ingresar un numero de telefono o celular");
+   if(!this.typep?.valid)return  alert("Marque si es Producto o Servicio");
+   if(!this.descp?.valid|| this.descp?.value==" ")return alert("Ingresar descripción del Producto o Servicio");
+   if(!this.typc?.valid)return alert("Marque si es Reclamo o Queja");
+   if(!this.descc?.valid|| this.descc?.value==" ")return  alert("Ingresar el Detalle del Reclamo o Queja");
+   if(!this.pedic?.valid|| this.pedic?.value==" ")return  alert("Ingresar el Pedido del Reclamo o Queja");
+ //  if(!this.acceptTerms?.valid)return alert("Aceptar los terminos y condiciones");
+   if(this.combookForm.valid){
+    console.log(this.combookForm.value);
+    this._create(this.combookForm.value);
+    //alert("Se registro tu solicitud se enviara una respuesta al siguiente Email: "+ this.Email.value + "durante  una espera de 30 dias. Gracias");
+
+
+   }
+
 }
+_listComplaint(){
+  this.cs.__listComplaint().subscribe(
+    (rest:any)=>{
+      this.complaints = rest;
+      console.log(this.complaints);
+    }
+  )
+}
+ _create(data:any){
+    this.cs.__insert(data).subscribe((result:any)=>{
+      if(result){
+  alert("se registro");
+      }
+
+
+    });
+
+ }
   ngOnInit(): void {
+     this._topShow();
+     this._listComplaint();
   }
 
-  get nomApellido(){
-   return this.combookForm.get('form2.nomApellido');
+  get name(){
+   return this.combookForm.get('name');
   }
-  get domicilio(){
-    return this.combookForm.get('form2.domicilio');
+  get address(){
+    return this.combookForm.get('address');
   }
-  get nDocumento(){
-    return this.combookForm.get('form2.nDocumento');
+  get ndoc(){
+    return this.combookForm.get('ndoc');
   }
   get email(){
-    return this.combookForm.get('form2.email');
+    return this.combookForm.get('email');
   }
-  get telf(){
-    return this.combookForm.get('form2.telf');
+  get cellphone(){
+    return this.combookForm.get('cellphone');
   }
-  get apoderado(){
-    return this.combookForm.get('form2.apoderado');
+  get repre(){
+    return this.combookForm.get('repre');
   }
-  get tipo(){
-    return this.combookForm.get('form3.tipo');
+  get typep(){
+    return this.combookForm.get('typep');
   }
-  get montoReclamado(){
-    return this.combookForm.get('form3.montoReclamado');
+  get price(){
+    return this.combookForm.get('price');
   }
-  get descReclamado(){
-    return this.combookForm.get('form3.descReclamado');
+  get descp(){
+    return this.combookForm.get('descp');
   }
-  get tipo2(){
-    return this.combookForm.get('form4.tipo2');
+  get typc(){
+    return this.combookForm.get('typc');
   }
-  get detalleReclamado(){
-    return this.combookForm.get('form4.detalleReclamado');
+  get descc(){
+    return this.combookForm.get('descc');
   }
-  get pedidoReclamado(){
-    return this.combookForm.get('form4.pedidoReclamo');
+  get pedic(){
+    return this.combookForm.get('pedic');
   }
   get acceptTerms(){
-    return this.combookForm.get('form4.acceptTerms');
+    return this.combookForm.get('acceptTerms');
   }
 }
