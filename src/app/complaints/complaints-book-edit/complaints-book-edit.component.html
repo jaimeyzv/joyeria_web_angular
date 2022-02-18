@@ -1,11 +1,12 @@
 <div class="container">
   <h2>Detalle del Reclamo</h2>
-  <div>
+  <div *ngIf="complaint != ''">
     <dl>
       <dt>
         Id
       </dt>
       <dd>
+
         {{complaint[0].id}}
       </dd>
       <dt>
@@ -92,8 +93,8 @@
       <dd>
         <form class="form form-all " [formGroup]="complaintForm" method="post">
           <div class="form-item form-group">
-            <select class="form-control form-control-sm" formControlName="reclamo">
-              <option value="" selected="">Estado del reclamo</option>
+            <select class="form-control form-control-sm" formControlName="statusC">
+              <option value="">Estado del reclamo</option>
               <option value="1" [selected]="complaint[0].statusC ==1">Pendiente</option>
               <option value="2" [selected]="complaint[0].statusC ==2">Resuelto</option>
 

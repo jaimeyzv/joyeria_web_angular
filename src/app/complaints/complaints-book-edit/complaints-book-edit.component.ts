@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ComplaintsBookService } from '../services/complaints-book.service';
 
 @Component({
@@ -10,9 +11,9 @@ import { ComplaintsBookService } from '../services/complaints-book.service';
 export class ComplaintsBookEditComponent implements OnInit {
   complaint:any=[];
   idc:any=0;
-  constructor(private fb:FormBuilder, private cb: ComplaintsBookService) { }
+  constructor(private fb:FormBuilder, private cb: ComplaintsBookService,private router:Router) { }
 complaintForm = this.fb.group({
-      reclamo:['']
+      statusC:['']
   })
   ngOnInit(): void {
 this.idc = sessionStorage.getItem('idc');
@@ -28,18 +29,22 @@ __getComplaintById(codigo:number){
 _update(data:any,id:any){
   this.cb.__update(data,id).subscribe((result:any)=>{
     if(result.name !=null){
-       alert("Se Actualizaron los datos");
-        window.location.reload();
+
+     this.router.navigate(['admin/complaints']);
+
+
+       // window.location.reload();
 
     }else{
-      alert("Error al Ingresar Usuario");
+      alert("Error al actualizar estado");
     }
 
   });
 
 }
 _onSubmit(){
-
+console.log(this.complaintForm.value);
+this._update(this.complaintForm.value,this.idc);
 }
 
 

@@ -17,7 +17,7 @@ return this.http.get<IUser[]>(this.baseUrl).pipe(
 map((o)=>
 o.map(
     (u):IUser =>({
-
+    id:u.id,
     name: u.name,
     lastName: u.lastName,
     documentNumber: u.documentNumber,
@@ -50,4 +50,7 @@ return this.http.get<any>('https://localhost:44343/api/user');
     return this.http.put<any>('https://localhost:44343/api/user/'+id,data);
 
   }
+  __delete(id:number){
+  return this.http.delete('https://localhost:44343/api/user/'+id);
+}
 }

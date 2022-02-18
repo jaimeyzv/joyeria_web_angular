@@ -12,11 +12,38 @@ import { UserService } from '../../services/user.service';
 export class UsersListComponent implements OnInit {
   users!: Array<IUser>;
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private us: UserService, private router: Router) {}
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((response) => {
+    this.us.getUsers().subscribe((response) => {
       this.users = <Array<IUser>>response;
     });
   }
+_onSubmit(id:any){
+ sessionStorage.setItem('idu',id);
+   this.router.navigate(['admin/users-update']);
+}
+  _delete(id:number,user:number){
+      if(user != 1){
+ var answer = window.confirm("¿Esta seguro de eliminar este usuario?");
+                  if (answer) {
+                      this.us.__delete(id).subscribe((rest)=>{
+                                      this.users = this.users.filter((u)=>u.id !== id);
+                                    });
+                  }
+                  else {
+
+                  }
+      }else{
+        alert("No puedes eliminar un Administrador, solo por Base de Datos");
+      }
+
+
+
+  }
+
+
+
+
+
 }

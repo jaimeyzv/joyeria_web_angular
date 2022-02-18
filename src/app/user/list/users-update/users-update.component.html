@@ -1,0 +1,62 @@
+<div class="container form-login">
+  <div *ngIf="user !=' '" class="login col-12">
+    <form class="form form-all " [formGroup]="updateForm" method="post">
+      <img class="form-img" src="assets/img/login/logo.png" alt="enjoya" width="300" height="300">
+      <h2 class=" text-center"> Editar Información</h2>
+      <div class="form-item form-group">
+        <input type="text" formControlName="name" placeholder="Nombre" class="form-control" [(ngModel)]="user[0].name"
+          value="{{user[0].name}}">
+      </div>
+
+      <div class="form-item form-group">
+        <input type="text" formControlName="lastName" placeholder="Apellidos" class="form-control"
+          value="{{user[0].lastName}}" [(ngModel)]="user[0].lastName">
+      </div>
+      <div class="form-item form-group ">
+        <select class="form-control form-control-sm" formControlName="documentTypeId"
+          [(ngModel)]="user[0].documentTypeId">
+          (ngModelChange)="toNumber()">
+          <option value="">Doc. de Identidad</option>
+          <option value="1" [selected]="user[0].documentTypeId == 1">DNI</option>
+          <option value="2" [selected]="user[0].documentTypeId == 2">RUC</option>
+          <option value="3" [selected]="user[0].documentTypeId == 3">Pasaporte</option>
+          <option value="4" [selected]="user[0].documentTypeId == 4">Carnet de Extranjeria</option>
+        </select>
+      </div>
+      <div class="form-item form-group">
+        <input type="text" formControlName="documentNumber" placeholder="Numero de Doc." class="form-control"
+          value="{{user[0].documentNumber}}" [(ngModel)]="user[0].documentNumber">
+      </div>
+      <div class="form-item form-group">
+        <input type="number" formControlName="cellphone" placeholder="Celular" class="form-control"
+          value="{{user[0].cellphone}}" [(ngModel)]="user[0].cellphone">
+      </div>
+      <div class="form-item form-group">
+        <input type="text" formControlName="address" placeholder="Dirección" class="form-control"
+          value="{{user[0].address}}" [(ngModel)]="user[0].address">
+      </div>
+      <div class="form-item form-group">
+        <input type="email" formControlName="email" placeholder="Correo Electronico" class="form-control" readonly
+          value="{{user[0].email}}" [(ngModel)]="user[0].email">
+      </div>
+      <div class="form-item form-group">
+        <input id="myInputPass" type="password" formControlName="password" placeholder="Contraseña "
+          class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <input type="checkbox" onclick="showPass()"> Show Password
+      </div>
+      <div class="form-item form-group">
+        <input id="myInputConPass" type="password" formControlName="confirmpassword" placeholder="Confirmar Contraseña "
+          class="form-control">
+      </div>
+      <div class="form-item form-group">
+        <button (click)="_onSubmit()" class="botonForm btn btn-primary" type="submit">Actualizar</button>
+      </div>
+    </form>
+
+  </div>
+
+
+
+</div>

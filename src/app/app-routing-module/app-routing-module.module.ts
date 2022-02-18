@@ -22,6 +22,7 @@ import { ProductListCarComponent } from '../product/components/list/product-list
 import { ComplaintsBookComponent } from '../complaints/complaints-book/complaints-book.component';
 import { ComplaintsBooksComponent } from '../complaints/complaints-books/complaints-books.component';
 import { ComplaintsBookEditComponent } from '../complaints/complaints-book-edit/complaints-book-edit.component';
+import { UsersUpdateComponent } from '../user/list/users-update/users-update.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -47,6 +48,7 @@ const routes: Routes = [
   { path: 'admin/sale-report', component: SaleReportComponent },
   { path: 'admin/category-list', component:CategoryListComponent },
   { path: 'admin/users-list', component:UsersListComponent },
+  {path:'admin/users-update',component:UsersUpdateComponent},
   { path: 'product-list-car', component: ProductListCarComponent },
   { path: 'product-detail/:id', component: ProductDetailComponent },
   {path:'admin/complaints',component:ComplaintsBooksComponent},
