@@ -1,6 +1,6 @@
 <div class="container form-login">
-  <div *ngIf="user !=' '" class="login col-12">
-    <form class="form form-all " [formGroup]="updateForm" method="post">
+  <div *ngIf="user !=''" class="login col-12">
+    <form class="form form-all " [formGroup]="updateForm" method="post" autocomplete="off">
       <img class="form-img" src="assets/img/login/logo.png" alt="enjoya" width="300" height="300">
       <h2 class=" text-center"> Editar Información</h2>
       <div class="form-item form-group">
@@ -41,15 +41,10 @@
       </div>
       <div class="form-item form-group">
         <input id="myInputPass" type="password" formControlName="password" placeholder="Contraseña "
-          class="form-control">
+          class="form-control" autocomplete="off">
       </div>
-      <div class="form-item form-group">
-        <input type="checkbox" onclick="showPass()"> Show Password
-      </div>
-      <div class="form-item form-group">
-        <input id="myInputConPass" type="password" formControlName="confirmpassword" placeholder="Confirmar Contraseña "
-          class="form-control">
-      </div>
+
+
       <div class="form-item form-group">
         <button (click)="_onSubmit()" class="botonForm btn btn-primary" type="submit">Actualizar</button>
       </div>
