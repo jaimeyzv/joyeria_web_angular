@@ -1,1 +1,28 @@
-<img class="form-img" src="assets/img/reporte/REPORTEVENTAS.png">
+
+<div class="container">
+  <h2 class="text-center" style="font-size: 26px; margin-bottom:20px;">Reporte de Ventas Durante el año 2022</h2>
+
+  <div class="table-responsive table-striped" style="border-radius: 10px;">
+    <table class="table" style="margin:0px;">
+      <thead style="background-color: rgba(52,58,64,0.75);color: rgb(255,255,255);">
+        <tr>
+
+          <th class="align-middle"><strong>Mes</strong><br></th>
+          <th class="align-middle"><strong>Cliente</strong><br></th>
+          <th class="align-middle"><strong> S/. Total</strong><br></th>
+          <th class="align-middle" style="text-align: center;"></th>
+          <th class="align-middle" style="text-align: center;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of sales">
+
+          <td class="align-middle">{{p.mes}}</td>
+          <td class="align-middle">{{p.cliente}}</td>
+          <td class="align-middle">{{p.total}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
