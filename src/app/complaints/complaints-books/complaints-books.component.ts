@@ -9,19 +9,25 @@ import { ComplaintsBookService } from '../services/complaints-book.service';
   styleUrls: ['./complaints-books.component.css']
 })
 export class ComplaintsBooksComponent implements OnInit {
-  complaints: any = [];
+  complaints!: Array<IComplaint> ;
+  fechaActual: any;
+  idc: any=0;
   constructor( private cb: ComplaintsBookService, private router: Router) { }
   __getComplaints(){
     this.cb. __listComplaint().subscribe((rest:any)=>{
-          this.complaints = rest;
+          this.complaints = <Array<IComplaint>>rest;
+          this.fechaActual = this.complaints[this.complaints.length-1].datec;
 
     })
   }
   _show(id:any){
-
+    sessionStorage.setItem('idc',id);
+   this.router.navigate(['admin/complaints/'+id]);
   }
-  _delete(id:any){
-
+  _delete(id:number){
+    this.cb._delete(id).subscribe((rest)=>{
+      this.complaints = this.complaints.filter((c)=>c.id !== id);
+    });
   }
   ngOnInit(): void {
     this.__getComplaints();

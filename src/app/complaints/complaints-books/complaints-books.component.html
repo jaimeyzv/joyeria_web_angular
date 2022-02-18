@@ -21,11 +21,11 @@
         <tr *ngFor="let c of complaints">
 
           <td class="align-middle">{{c.id}}</td>
-          <td class="align-middle">{{c.datec}}</td>
+          <td class="align-middle">{{c.datec| date}}</td>
           <td class="align-middle">{{c.name}} </td>
           <td class="align-middle">{{c.typep}}</td>
           <td class="align-middle">{{c.typc}}</td>
-          <td class="align-middle" *ngIf="c.statusC == '1' else second">Pendiente</td>
+          <td class="align-middle" *ngIf="c.statusC == 1 else second">Pendiente</td>
           <ng-template #second>
             <td class="align-middle">Resuelto</td>
           </ng-template>

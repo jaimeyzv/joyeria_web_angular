@@ -9,7 +9,9 @@ import { ComplaintsBookService } from '../services/complaints-book.service';
   styleUrls: ['./complaints-book.component.css']
 })
 export class ComplaintsBookComponent implements OnInit {
-
+anio:any=(new Date()).getFullYear();
+fechaactual:any=(new Date()).getDate();
+contador:number=0;
 complaints:any=[];
 combookForm = this.fb.group({
 /*
@@ -24,7 +26,7 @@ address:['',Validators.required],
 ndoc:['',Validators.required],
 email:['',[Validators.required, Validators.email]],
 cellphone:['',Validators.required],
-repre:['not parent']
+repre:['']
  ,
 
 typep:['',Validators.required],
@@ -66,9 +68,12 @@ _onSubmit(){
 
 }
 _listComplaint(){
+   this.anio = (new Date()).getFullYear();
+   this.fechaactual  =(new Date());
   this.cs.__listComplaint().subscribe(
     (rest:any)=>{
       this.complaints = rest;
+       this.contador = (this.complaints[this.complaints.length-1].id)+1;
       console.log(this.complaints);
     }
   )
@@ -76,7 +81,7 @@ _listComplaint(){
  _create(data:any){
     this.cs.__insert(data).subscribe((result:any)=>{
       if(result){
-  alert("se registro");
+  alert("se registro con exito su "+this.typc?.value +". Se enviara la respuesta al siguiente correo "+this.email?.value+" entre los proximos 30 dias habiles.");
       }
 
 

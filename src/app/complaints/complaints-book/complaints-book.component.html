@@ -11,13 +11,14 @@
         <div class="col-md-6 col-12">
           <div class="form-group">
             <label for="fechaReclamo">Fecha de Reclamo o queja:</label>
-            <input id="fechaReclamo" type="text" value="23-01-2022" class="form-control" readonly>
+            <input id="fechaReclamo" type="text" value="{{fechaactual | date:'mediumDate'}}" class="form-control"
+              readonly>
           </div>
         </div>
         <div class="col-md-6 col-12">
           <div class=" form-group">
             <label for="codReclamacion">Hoja reclamación:</label>
-            <input id="codReclamacion" type="text" value="00001-2022" class="form-control" readonly>
+            <input id="codReclamacion" type="text" value="{{contador}}-{{anio}}" class="form-control" readonly>
           </div>
         </div>
       </div>

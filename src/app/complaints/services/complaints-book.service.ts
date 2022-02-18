@@ -36,34 +36,24 @@ export class ComplaintsBookService {
       )
     );
   }
-
-
+_delete(id:number){
+  return this.http.delete('https://localhost:44343/api/complaint/'+id);
+}
+_getComplaintById(){
+return this.http.get<any>('https://localhost:44343/api/complaint');
+}
 
  __listComplaint(){
     return this.http.get<any>('https://localhost:44343/api/complaint');
   }
+ __update(data:any,id:any){
+    return this.http.put<any>('https://localhost:44343/api/complaint/'+id,data);
 
+  }
 
 
 __insert(data:any){
-/*
-  var name = data?.form2.Name;
-  var adress=data?.form2.Address
-  var doc = data?.form2.Ndoc;
-  var email = data?.form2.Email;
-  var cell = data?.form2.Cellphone;
-  var  repre = data?.form2.Repre;
-  var typep = data?.form3.Typep;
-  var price = data?.form3.Price;
-  var descp= data?.form3.Descp;
-  var  typc = data?.form4.Typc;
-  var descc= data?.form4.Descc;
-  var pedic = data?.form4.Pedic;*/
-   let complaint = {
 
-   };
-   console.log("datos ingresados");
-   console.log(data);
    return this.http.post<any>('https://localhost:44343/api/complaint', data);
 
   }

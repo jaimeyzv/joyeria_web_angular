@@ -1,1 +1,110 @@
-<p>complaints-book-edit works!</p>
+<div class="container">
+  <h2>Detalle del Reclamo</h2>
+  <div>
+    <dl>
+      <dt>
+        Id
+      </dt>
+      <dd>
+        {{complaint[0].id}}
+      </dd>
+      <dt>
+        Fecha de Reclamo
+      </dt>
+      <dd>
+        {{complaint[0].datec| date:'shortDate'}}
+      </dd>
+      <dt>
+        Nombre del Cliente
+      </dt>
+      <dd>
+        {{complaint[0].name}}
+      </dd>
+      <dt>
+        Dirección del Cliente
+      </dt>
+      <dd>
+        {{complaint[0].address}}
+      </dd>
+      <dt>
+        Numero de Documento
+      </dt>
+      <dd>
+        {{complaint[0].ndoc}}
+      </dd>
+      <dt>
+        Correo Electronico
+      </dt>
+      <dd>
+        {{complaint[0].email}}
+      </dd>
+      <dt>
+        Numero de Contacto
+      </dt>
+      <dd>
+        {{complaint[0].cellphone}}
+      </dd>
+      <dt>
+        ¿Apoderado?
+      </dt>
+      <dd>
+        {{complaint[0].repre}}
+      </dd>
+      <dt>
+        Tipo de Bien Reclamado
+      </dt>
+      <dd>
+        {{complaint[0].typep}}
+      </dd>
+      <dt>
+        Monto Reclamado
+      </dt>
+      <dd>
+        S/. {{complaint[0].price}}
+      </dd>
+      <dt>
+        Descripcion del Reclamo
+      </dt>
+      <dd>
+        {{complaint[0].descp}}
+      </dd>
+      <dt>
+        Tipo de Reclamo
+      </dt>
+      <dd>
+        {{complaint[0].typc}}
+      </dd>
+      <dt>
+        Descripcion del Reclamo
+      </dt>
+      <dd>
+        {{complaint[0].descc}}
+      </dd>
+      <dt>
+        Descripcion del Pedido
+      </dt>
+      <dd>
+        {{complaint[0].pedic}}
+      </dd>
+      <dt>
+        Estado del Reclamo
+      </dt>
+      <dd>
+        <form class="form form-all " [formGroup]="complaintForm" method="post">
+          <div class="form-item form-group">
+            <select class="form-control form-control-sm" formControlName="reclamo">
+              <option value="" selected="">Estado del reclamo</option>
+              <option value="1" [selected]="complaint[0].statusC ==1">Pendiente</option>
+              <option value="2" [selected]="complaint[0].statusC ==2">Resuelto</option>
+
+            </select>
+          </div>
+          <div class="form-item form-group">
+            <button (click)="_onSubmit()" class="botonForm btn btn-primary" type="submit">Actualizar</button>
+          </div>
+        </form>
+
+      </dd>
+    </dl>
+  </div>
+</div>
