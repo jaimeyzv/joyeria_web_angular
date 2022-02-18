@@ -16,20 +16,21 @@ export class ComplaintsBookService {
       map((o) =>
         o.map(
           (c): IComplaint => ({
-  Datec: c.Datec,
-  Name: c.Name ,
-  Address: c.Address,
-  Ndoc: c.Ndoc,
-  Email: c.Email,
-  Cellphone: c.Cellphone,
-  Repre: c.Repre,
-  Typep: c.Typc,
-  Price: c.Price,
-  Descp: c.Descp,
-  Typc: c.Typc,
-  Descc: c.Descc,
-  Pedic: c.Pedic,
-  StatusC: c.StatusC
+    id: c.id,
+  datec: c.datec,
+  name: c.name ,
+  address: c.address,
+  ndoc: c.ndoc,
+  email: c.email,
+  cellphone: c.cellphone,
+  repre: c.repre,
+  typep: c.typc,
+  price: c.price,
+  descp: c.descp,
+  typc: c.typc,
+  descc: c.descc,
+  pedic: c.pedic,
+  statusC: c.statusC
           })
         )
       )

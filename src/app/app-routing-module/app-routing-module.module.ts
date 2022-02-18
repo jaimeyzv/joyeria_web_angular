@@ -6,7 +6,7 @@ import { HistorialComprasComponent } from '../historial-compras/components/histo
 import { RegisterComponent } from '../user/register/register.component';
 import { UpdateComponent } from '../user/update/update.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
-import { ComplaintsBookComponent } from '../complaints-book/complaints-book.component';
+
 import { ContactusComponent } from '../contactus/contactus.component';
 import { ProductDetailComponent } from '../product/components/detail/product-detail.component';
 import { CartComponent } from '../cart/cart.component';
@@ -19,6 +19,8 @@ import { SaleReportComponent } from '../admin/sale/components/sale-report/sale-r
 import { CategoryListComponent } from '../admin/category/components/category-list/category-list.component';
 import { UsersListComponent }    from '../user/list/users-list/users-list.component';
 import { ProductListCarComponent } from '../product/components/list/product-list-car.component';
+import { ComplaintsBookComponent } from '../complaints/complaints-book/complaints-book.component';
+import { ComplaintsBooksComponent } from '../complaints/complaints-books/complaints-books.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -46,6 +48,7 @@ const routes: Routes = [
   { path: 'admin/users-list', component:UsersListComponent },
   { path: 'product-list-car', component: ProductListCarComponent },
   { path: 'product-detail/:id', component: ProductDetailComponent },
+  {path:'admin/complaints',component:ComplaintsBooksComponent}
 ];
 
 // configures NgModule imports and exports

@@ -9,7 +9,7 @@ import { HistorialComprasComponent } from './historial-compras/components/histor
 import { RegisterComponent } from './user/register/register.component';
 import { UpdateComponent } from './user/update/update.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { ComplaintsBookComponent } from './complaints-book/complaints-book.component';
+import { ComplaintsBookComponent } from './complaints/complaints-book/complaints-book.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ProductDetailComponent } from './product/components/detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,6 +27,9 @@ import { SaleReportComponent } from './admin/sale/components/sale-report/sale-re
 import { CategoryListComponent } from './admin/category/components/category-list/category-list.component';
 import { UsersListComponent } from './user/list/users-list/users-list.component';
 import { ProductListCarComponent } from './product/components/list/product-list-car.component';
+import { ComplaintsBooksComponent } from './complaints/complaints-books/complaints-books.component';
+import { ComplaintsBookEditComponent } from './complaints/complaints-book-edit/complaints-book-edit.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +55,9 @@ import { ProductListCarComponent } from './product/components/list/product-list-
     SaleReportComponent,
     CategoryListComponent,
     UsersListComponent,
-    ProductListCarComponent
+    ProductListCarComponent,
+    ComplaintsBooksComponent,
+    ComplaintsBookEditComponent
   ],
   imports: [
     BrowserModule,

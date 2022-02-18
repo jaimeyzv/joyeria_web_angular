@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CheckboxRequiredValidator, FormBuilder, Validators } from '@angular/forms';
-import { ComplaintsBookService } from './services/complaints-book.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ComplaintsBookService } from '../services/complaints-book.service';
+
+
 @Component({
   selector: 'app-complaints-book',
   templateUrl: './complaints-book.component.html',
