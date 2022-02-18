@@ -23,6 +23,8 @@ import { ComplaintsBookComponent } from '../complaints/complaints-book/complaint
 import { ComplaintsBooksComponent } from '../complaints/complaints-books/complaints-books.component';
 import { ComplaintsBookEditComponent } from '../complaints/complaints-book-edit/complaints-book-edit.component';
 import { UsersUpdateComponent } from '../user/list/users-update/users-update.component';
+import { CategoryCreateComponent } from '../admin/category/components/category-create/category-create.component';
+import { CategoryUpdateComponent } from '../admin/category/components/category-update/category-update.component';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
@@ -47,6 +49,8 @@ const routes: Routes = [
   { path: 'admin/product-create', component: ProductCreateComponent },
   { path: 'admin/sale-report', component: SaleReportComponent },
   { path: 'admin/category-list', component:CategoryListComponent },
+  {path:'admin/category-create',component: CategoryCreateComponent},
+  {path:'admin/category-update',component: CategoryUpdateComponent},
   { path: 'admin/users-list', component:UsersListComponent },
   {path:'admin/users-update',component:UsersUpdateComponent},
   { path: 'product-list-car', component: ProductListCarComponent },

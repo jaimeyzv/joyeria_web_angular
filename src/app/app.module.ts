@@ -30,6 +30,8 @@ import { ProductListCarComponent } from './product/components/list/product-list-
 import { ComplaintsBooksComponent } from './complaints/complaints-books/complaints-books.component';
 import { ComplaintsBookEditComponent } from './complaints/complaints-book-edit/complaints-book-edit.component';
 import { UsersUpdateComponent } from './user/list/users-update/users-update.component';
+import { CategoryCreateComponent } from './admin/category/components/category-create/category-create.component';
+import { CategoryUpdateComponent } from './admin/category/components/category-update/category-update.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { UsersUpdateComponent } from './user/list/users-update/users-update.comp
     ProductListCarComponent,
     ComplaintsBooksComponent,
     ComplaintsBookEditComponent,
-    UsersUpdateComponent
+    UsersUpdateComponent,
+    CategoryCreateComponent,
+    CategoryUpdateComponent
   ],
   imports: [
     BrowserModule,

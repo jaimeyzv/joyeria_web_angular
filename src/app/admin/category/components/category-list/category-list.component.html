@@ -1,27 +1,28 @@
 <div class="container">
-    <h2 class="text-center" style="font-size: 26px; margin-bottom:20px;">Listado de Categorias</h2>
-    
-    <div class="table-responsive table-striped" style="border-radius: 10px;">
-        <table class="table" style="margin:0px;">
-            <thead style="background-color: rgba(52,58,64,0.75);color: rgb(255,255,255);">
-                <tr>
+  <h2 class="text-center" style="font-size: 26px; margin-bottom:20px;">Listado de Categorias</h2>
+  <button class="btn btn-primary" (click)=goToCategoryCreate() style="background-color: normal;">Nuevo</button>
+  <div class="table-responsive table-striped" style="border-radius: 10px;">
+    <table class="table" style="margin:0px;">
+      <thead style="background-color: rgba(52,58,64,0.75);color: rgb(255,255,255);">
+        <tr>
 
-                    <th class="align-middle"><strong>Código</strong><br></th>
-                    <th class="align-middle"><strong>Descripcion</strong><br></th>
-                    <th class="align-middle" style="text-align: center;"></th>
-                    <th class="align-middle" style="text-align: center;"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let p of categorys">
-                 
-                    <td class="align-middle">{{p.id}}</td>
-                    <td class="align-middle">{{p.name}}</td>
-                    <td class="text-center"><button class="btn btn-outline-dark" ><i class="fa fa-pencil"></i>Editar</button></td>
-                    <td class="text-center"><button class="btn btn-outline-danger" ><i class="fa fa-remove"></i>Eliminar</button></td>
-             
-                </tr>                       
-            </tbody>
-        </table>
-    </div>
+          <th class="align-middle"><strong>Código</strong><br></th>
+          <th class="align-middle"><strong>Descripcion</strong><br></th>
+          <th class="align-middle" style="text-align: center;"></th>
+          <th class="align-middle" style="text-align: center;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of categorys">
+
+          <td class="align-middle">{{p.id}}</td>
+          <td class="align-middle">{{p.name}}</td>
+          <td class="text-center"><button (click)="_onSubmit(p.id)" class="btn btn-outline-dark"><i
+                class="fa fa-pencil"></i>Editar</button></td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

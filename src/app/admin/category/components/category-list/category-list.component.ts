@@ -14,7 +14,7 @@ import { CategoryService } from '../../services/category.service';
 export class CategoryListComponent implements OnInit {
   categorys!: Array<ICategory>;
 
- 
+
   constructor(private categoryService: CategoryService, private router: Router) {}
 
   ngOnInit(): void {
@@ -22,5 +22,11 @@ export class CategoryListComponent implements OnInit {
       this.categorys = <Array<ICategory>>response;
     });
   }
-
+goToCategoryCreate(){
+  this.router.navigate(['admin/category-create']);
+}
+_onSubmit(id:any){
+ sessionStorage.setItem('idcat',id);
+ this.router.navigate(['admin/category-update']);
+}
 }

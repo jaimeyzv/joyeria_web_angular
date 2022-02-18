@@ -1,0 +1,20 @@
+<div class="container form-login">
+  <div class="login col-12">
+    <form class="form form-all " [formGroup]="registerForm" method="post">
+      <img class="form-img" src="assets/img/login/logo.png" alt="enjoya" width="300" height="300">
+      <h2 class="text-center"> Registrar Categoria</h2>
+
+      <div class="form-item form-group">
+        <input type="text" formControlName="name" placeholder="Nombre de Categoria" class="form-control">
+      </div>
+
+      <div class="form-item form-group">
+        <button (click)="_onSubmit()" class="botonForm btn btn-primary" type="submit">Registrar</button>
+      </div>
+    </form>
+
+  </div>
+
+
+
+</div>
